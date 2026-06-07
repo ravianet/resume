@@ -1,0 +1,4 @@
+*.docx
+*.docx~
+extract_resume.py
+resume_text.txt
