@@ -8,6 +8,9 @@
   <meta property="og:title" content="Valluru Ravikumar — IT Leader & AI Developer"/>
   <meta property="og:description" content="15+ years IT leadership. AI full-stack developer. 500+ locations, 50K+ users. Hyderabad, India."/>
   <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://ravianet.github.io/rusume/"/>
+  <meta property="og:image" content="https://ravianet.github.io/rusume/avatar.png"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231f2937%22/><text x=%2250%22 y=%2268%22 font-family=%22sans-serif%22 font-size=%2255%22 font-weight=%22bold%22 fill=%22%233b82f6%22 text-anchor=%22middle%22>RK</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -91,6 +94,12 @@
     }
     body.light-mode::before { opacity: 0.5; }
 
+    /* Scroll Progress Bar */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; background: var(--accent-1);
+      z-index: 9999; width: 0%; box-shadow: 0 0 10px var(--accent-1); transition: width 0.1s;
+    }
+
     /* ── NAV ─────────────────────────────────────────── */
     #nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 900;
@@ -138,15 +147,23 @@
 
     .hero-inner { position: relative; z-index: 1; width: 100%; max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center; }
     
+    .hero-top-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; animation: fadeUp .8s ease both; }
     .hero-tag { 
       display: inline-flex; align-items: center; gap: 8px; 
       background: var(--bg-card); border: 1px solid var(--edge-dim); backdrop-filter: blur(10px);
-      border-radius: var(--r-full); padding: 6px 20px; width: fit-content; margin-bottom: 32px; 
-      animation: fadeUp .8s ease both;
+      border-radius: var(--r-full); padding: 6px 20px; 
     }
     .tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-1); box-shadow: 0 0 10px var(--accent-1); animation: blink 2s ease infinite; }
     .hero-tag span { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-2); }
     
+    .avail-badge {
+      display: inline-flex; align-items: center; gap: 8px; 
+      background: rgba(40, 200, 64, 0.1); border: 1px solid rgba(40, 200, 64, 0.2); 
+      border-radius: var(--r-full); padding: 6px 20px;
+    }
+    .avail-dot { width: 6px; height: 6px; border-radius: 50%; background: #28c840; box-shadow: 0 0 10px #28c840; animation: blink 2s ease infinite; }
+    .avail-badge span { font-size: .75rem; font-weight: 700; letter-spacing: .05em; color: #28c840; text-transform: uppercase; }
+
     .hero-name { font-family: 'Outfit', sans-serif; font-size: clamp(3.5rem, 6vw, 5.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -.03em; animation: fadeUp .8s .1s ease both; }
     .name-gradient { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     
@@ -350,11 +367,12 @@
       .skills-grid, .port-grid { grid-template-columns: 1fr; }
     }
 
+  <style>
     /* ── PRINT CSS ───────────────────────────────────── */
     @media print {
       * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
       body { background: #fff !important; color: #111 !important; font-size: 11pt; }
-      body::before, .orb, #nav, #pdfBtn, #terminal-section, .hero-cta, .skill-filters, .theme-toggle { display: none !important; }
+      body::before, .orb, #nav, #pdfBtn, #terminal-section, .hero-cta, .skill-filters, .theme-toggle, #scroll-progress { display: none !important; }
       section { padding: 24pt 0 !important; page-break-inside: avoid; }
       .hero-name { font-size: 32pt !important; color: #111 !important; }
       .stats-card, .skill-card, .pcard { border: 1pt solid #ddd !important; background: #fff !important; box-shadow: none !important; break-inside: avoid; }
@@ -364,6 +382,8 @@
   </style>
 </head>
 <body>
+
+<div id="scroll-progress"></div>
 
 <!-- ── NAV ─────────────────────────────────────────── -->
 <nav id="nav">
@@ -393,9 +413,15 @@
 
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-tag">
-        <div class="tag-dot"></div>
-        <span>Enterprise Infrastructure & AI</span>
+      <div class="hero-top-tags">
+        <div class="hero-tag">
+          <div class="tag-dot"></div>
+          <span>Enterprise Infrastructure & AI</span>
+        </div>
+        <div class="avail-badge">
+          <div class="avail-dot"></div>
+          <span>Available for Global Roles</span>
+        </div>
       </div>
 
       <h1 class="hero-name">
@@ -648,9 +674,18 @@
 </button>
 
 <script>
-  // Nav scroll
+  // Nav & Scroll Progress
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); }, {passive: true});
+  const scrollBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => { 
+    nav.classList.toggle('scrolled', window.scrollY > 50); 
+    
+    // Calculate scroll progress percentage
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    scrollBar.style.width = scrolled + "%";
+  }, {passive: true});
 
   // Reveal Animations
   const observer = new IntersectionObserver(entries => {
