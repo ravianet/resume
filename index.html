@@ -139,13 +139,11 @@
       font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: -.02em;
       display: inline-flex; align-items: center; gap: 12px;
     }
-    .nav-brand::before {
-      content: 'RK';
-      width: 34px; height: 34px; border-radius: 12px; display: grid; place-items: center;
-      background: linear-gradient(135deg, rgba(56, 189, 248, 0.24), rgba(168, 85, 247, 0.2));
+    .nav-brand-logo {
+      width: 34px; height: 34px; border-radius: 12px; object-fit: cover;
       border: 1px solid rgba(125, 211, 252, 0.32);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 24px rgba(56, 189, 248, 0.12);
-      font-size: .8rem; letter-spacing: .08em;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.24), rgba(168, 85, 247, 0.2));
     }
     body.light-mode .nav-items a { color: #334155; }
     body.light-mode .nav-items a:hover { color: #0f172a; background: rgba(37, 99, 235, 0.08); }
@@ -696,7 +694,10 @@
 
 <!-- ── NAV ─────────────────────────────────────────── -->
 <nav id="nav">
-  <div class="nav-brand">Valluru Ravikumar</div>
+  <div class="nav-brand">
+    <img src="avatar.png" alt="Ravi Kumar Valluru logo" class="nav-brand-logo"/>
+    <span>Ravi Kumar Valluru</span>
+  </div>
   <ul class="nav-items">
     <li><a href="#terminal-section">Console</a></li>
     <li><a href="#role-tailor">AI Tailor</a></li>
@@ -740,8 +741,8 @@
       </div>
 
       <h1 class="hero-name">
-        Valluru <br>
-        <span class="name-gradient">Ravikumar</span>
+        Ravi Kumar <br>
+        <span class="name-gradient">Valluru</span>
       </h1>
 
       <p class="hero-subtitle">
@@ -776,7 +777,7 @@
         <div class="profile-banner" style="margin-top:0; padding-top:0; border:none; margin-bottom: 32px;">
           <div class="avatar-wrap"><div class="monogram">RK</div></div>
           <div class="profile-info">
-            <div class="profile-name">Valluru Ravikumar</div>
+            <div class="profile-name">Ravi Kumar Valluru</div>
             <div class="profile-role">Senior Manager, IT Infrastructure</div>
           </div>
         </div>
