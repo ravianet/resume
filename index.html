@@ -171,6 +171,8 @@
     .hero-subtitle strong { color: var(--accent-1); }
     
     .hero-bio { font-size: 1.05rem; color: var(--text-2); line-height: 1.8; max-width: 540px; margin-top: 24px; animation: fadeUp .8s .3s ease both; }
+    .typing-cursor { color: var(--accent-1); animation: blink 1s step-end infinite; font-weight: 700; }
+    .ai-highlight { color: var(--accent-1); font-weight: 700; }
     
     /* Minimal Contact Chips */
     .hero-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; animation: fadeUp .8s .4s ease both; }
@@ -279,6 +281,53 @@
     }
     .t-hint-btn:hover { color: var(--text-1); border-color: var(--text-1); background: var(--bg-card); }
 
+    /* ── AI ROLE TAILOR ───────────────────────────────── */
+    #role-tailor { background: var(--bg-base); border-bottom: 1px solid var(--edge-dim); }
+    .tailor-card {
+      background: var(--bg-surface); border: 1px solid var(--edge-dim);
+      border-radius: var(--r-xl); padding: 36px; box-shadow: var(--shadow-sm);
+      display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 32px; align-items: start;
+    }
+    .persona-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .persona-btn {
+      text-align: left; border: 1px solid var(--edge-dim); background: var(--bg-base);
+      color: var(--text-2); border-radius: var(--r-lg); padding: 16px; cursor: pointer;
+      transition: all .3s; font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .persona-btn strong { display: block; color: var(--text-1); margin-bottom: 4px; }
+    .persona-btn.active, .persona-btn:hover { border-color: var(--accent-1); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .tailor-output { border-left: 1px solid var(--edge-dim); padding-left: 32px; }
+    .match-score { font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 800; color: var(--accent-1); line-height: 1; }
+    .tailor-summary { color: var(--text-2); margin: 16px 0 20px; }
+    .tailor-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    /* ── AI RECRUITER CHAT ─────────────────────────────── */
+    .chat-launcher {
+      position: fixed; bottom: 96px; right: 32px; z-index: 820; width: 58px; height: 58px;
+      border-radius: 50%; border: 1px solid var(--edge-hi); background: var(--grad-accent);
+      color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer;
+      box-shadow: var(--shadow-lg); font-size: 1.4rem; transition: transform .3s;
+    }
+    .chat-launcher:hover { transform: translateY(-4px) scale(1.03); }
+    .chat-panel {
+      position: fixed; right: 32px; bottom: 168px; z-index: 821; width: min(390px, calc(100vw - 32px));
+      background: var(--bg-surface); border: 1px solid var(--edge-dim); border-radius: var(--r-xl);
+      box-shadow: var(--shadow-lg); overflow: hidden; display: none;
+    }
+    .chat-panel.open { display: block; animation: fadeUp .25s ease both; }
+    .chat-head { padding: 18px 20px; border-bottom: 1px solid var(--edge-dim); display: flex; justify-content: space-between; align-items: center; }
+    .chat-head strong { font-family: 'Outfit', sans-serif; }
+    .chat-close { background: transparent; border: none; color: var(--text-2); font-size: 1.3rem; cursor: pointer; }
+    .chat-body { height: 320px; overflow-y: auto; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+    .msg { padding: 10px 14px; border-radius: 16px; font-size: .88rem; line-height: 1.55; max-width: 88%; }
+    .msg.bot { background: var(--bg-base); color: var(--text-2); border: 1px solid var(--edge-dim); align-self: flex-start; }
+    .msg.user { background: var(--accent-1); color: #fff; align-self: flex-end; }
+    .chat-suggestions { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 18px 14px; }
+    .chat-suggestions button { border: 1px solid var(--edge-dim); border-radius: var(--r-full); background: transparent; color: var(--text-2); padding: 6px 10px; font-size: .75rem; cursor: pointer; }
+    .chat-input-row { display: flex; gap: 10px; padding: 14px; border-top: 1px solid var(--edge-dim); }
+    #chatInput { flex: 1; border: 1px solid var(--edge-dim); background: var(--bg-base); color: var(--text-1); border-radius: var(--r-full); padding: 10px 14px; outline: none; }
+    #chatSend { border: none; background: var(--text-1); color: var(--bg-base); border-radius: var(--r-full); padding: 0 16px; font-weight: 700; cursor: pointer; }
+
     /* ── SKILLS ──────────────────────────────────────── */
     .skill-filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
     .filter-tab { 
@@ -297,6 +346,8 @@
     }
     .skill-card:hover { transform: translateY(-6px); border-color: var(--edge-hi); box-shadow: var(--shadow-sm); }
     .skill-card.dimmed { opacity: 0.2; transform: scale(0.98); pointer-events: none; }
+    .skill-card.role-match, .pcard.role-match { border-color: var(--accent-1); box-shadow: 0 0 0 1px var(--accent-glow), var(--shadow-sm); }
+    .skill-card.role-soft, .pcard.role-soft { opacity: .55; }
     .skill-title { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--text-1); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
     .skill-icon { font-size: 1.5rem; }
     .skill-pills { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -365,14 +416,19 @@
       .hero-cta { justify-content: center; flex-wrap: wrap; }
       .nav-items { display: none; }
       .skills-grid, .port-grid { grid-template-columns: 1fr; }
+      .tailor-card { grid-template-columns: 1fr; }
+      .tailor-output { border-left: none; border-top: 1px solid var(--edge-dim); padding-left: 0; padding-top: 28px; }
+      .persona-grid { grid-template-columns: 1fr; }
+      .chat-launcher { right: 18px; bottom: 88px; }
+      .chat-panel { right: 16px; bottom: 154px; }
     }
 
-  <style>
+    
     /* ── PRINT CSS ───────────────────────────────────── */
     @media print {
       * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
       body { background: #fff !important; color: #111 !important; font-size: 11pt; }
-      body::before, .orb, #nav, #pdfBtn, #terminal-section, .hero-cta, .skill-filters, .theme-toggle, #scroll-progress { display: none !important; }
+      body::before, .orb, #nav, #pdfBtn, #terminal-section, #role-tailor, .chat-panel, .chat-launcher, .hero-cta, .skill-filters, .theme-toggle, #scroll-progress { display: none !important; }
       section { padding: 24pt 0 !important; page-break-inside: avoid; }
       .hero-name { font-size: 32pt !important; color: #111 !important; }
       .stats-card, .skill-card, .pcard { border: 1pt solid #ddd !important; background: #fff !important; box-shadow: none !important; break-inside: avoid; }
@@ -390,6 +446,7 @@
   <div class="nav-brand">Valluru Ravikumar</div>
   <ul class="nav-items">
     <li><a href="#terminal-section">Console</a></li>
+    <li><a href="#role-tailor">AI Tailor</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#portfolio">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -433,8 +490,8 @@
         Senior IT Infrastructure Manager & <strong>AI Developer</strong>
       </p>
 
-      <p class="hero-bio">
-        A high-impact IT leader with 15+ years managing massive-scale infrastructure across 500+ locations. Merging deep enterprise expertise with modern AI and full-stack engineering to build intelligent, future-ready solutions.
+      <p class="hero-bio" id="heroBio" data-default="A high-impact IT leader with 15+ years managing massive-scale infrastructure across 500+ locations. Merging deep enterprise expertise with modern AI and full-stack engineering to build intelligent, future-ready solutions.">
+        <span id="heroBioText">A high-impact IT leader with 15+ years managing massive-scale infrastructure across 500+ locations. Merging deep enterprise expertise with modern AI and full-stack engineering to build intelligent, future-ready solutions.</span><span class="typing-cursor">|</span>
       </p>
 
       <div class="hero-chips">
@@ -497,9 +554,40 @@
     <div class="t-hint-btns">
       <button class="t-hint-btn" onclick="runCommand('help')">help</button>
       <button class="t-hint-btn" onclick="runCommand('skills')">skills</button>
-      <button class="t-hint-btn" onclick="runCommand('projects')">projects</button>
+      <button class="t-hint-btn" onclick="runCommand('show all 7 projects')">all 7 projects</button>
+      <button class="t-hint-btn" onclick="runCommand('tell me about vision ai')">Vision AI</button>
+      <button class="t-hint-btn" onclick="runCommand('what is his ai experience')">AI experience</button>
       <button class="t-hint-btn" onclick="runCommand('contact')">contact</button>
       <button class="t-hint-btn" onclick="runCommand('clear')">clear</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI ROLE TAILOR ─────────────────────────────────── -->
+<section id="role-tailor">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="sec-eyebrow">AI Persona Switcher</span>
+      <h2 class="sec-title">Tailor This Resume to the Role</h2>
+    </div>
+
+    <div class="tailor-card reveal">
+      <div>
+        <div class="persona-grid">
+          <button class="persona-btn active" data-role="ai" onclick="applyRole('ai', this)"><strong>AI Engineer</strong>AI apps, ML, anomaly detection, forecasting.</button>
+          <button class="persona-btn" data-role="infra" onclick="applyRole('infra', this)"><strong>IT Infrastructure Leader</strong>Scale, users, sites, cloud, teams.</button>
+          <button class="persona-btn" data-role="fullstack" onclick="applyRole('fullstack', this)"><strong>Full-Stack Developer</strong>Django, Flask, React, APIs, portals.</button>
+          <button class="persona-btn" data-role="security" onclick="applyRole('security', this)"><strong>Security / Network</strong>Firewalls, VPN, monitoring, compliance.</button>
+        </div>
+      </div>
+
+      <div class="tailor-output">
+        <div class="match-score" id="matchScore">96%</div>
+        <p class="tailor-summary" id="tailorSummary">Strong AI + infrastructure fit: 15+ years at enterprise scale with independent AI products and full-stack platforms.</p>
+        <div class="tailor-chips" id="tailorChips">
+          <span class="pill">Python</span><span class="pill">AI/ML</span><span class="pill">Django</span><span class="pill">Computer Vision</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -520,7 +608,7 @@
     </div>
 
     <div class="skills-grid">
-      <div class="skill-card reveal" data-category="ai">
+      <div class="skill-card reveal" data-category="ai" data-roles="ai fullstack">
         <div class="skill-title"><span class="skill-icon">🤖</span> AI & Software</div>
         <div class="skill-pills">
           <span class="pill">Python</span><span class="pill">Django</span><span class="pill">Flask</span>
@@ -529,7 +617,7 @@
         </div>
       </div>
 
-      <div class="skill-card reveal d1" data-category="infra">
+      <div class="skill-card reveal d1" data-category="infra" data-roles="infra security">
         <div class="skill-title"><span class="skill-icon">☁️</span> Cloud & Infra</div>
         <div class="skill-pills">
           <span class="pill">Azure AD</span><span class="pill">Office 365</span>
@@ -538,7 +626,7 @@
         </div>
       </div>
 
-      <div class="skill-card reveal d2" data-category="security">
+      <div class="skill-card reveal d2" data-category="security" data-roles="security infra">
         <div class="skill-title"><span class="skill-icon">🔐</span> Security & Network</div>
         <div class="skill-pills">
           <span class="pill">FortiGate</span><span class="pill">Sophos</span>
@@ -560,7 +648,7 @@
 
     <div class="port-grid">
       <!-- Project 01 -->
-      <div class="pcard reveal">
+      <div class="pcard reveal" data-roles="ai infra fullstack security" data-project-key="vision-ai">
         <div class="pc-num">01 // Live Enterprise System</div>
         <div class="scaits-badge">
           <div class="scaits-logo">SC</div>
@@ -573,7 +661,7 @@
       </div>
 
       <!-- Project 02 -->
-      <div class="pcard reveal d1">
+      <div class="pcard reveal d1" data-roles="ai fullstack" data-project-key="sentient-vista-ai">
         <div class="pc-num">02 // AI Product</div>
         <div class="pc-title">Sentient Vista AI</div>
         <div class="pc-role">Lead AI Developer</div>
@@ -582,7 +670,7 @@
       </div>
 
       <!-- Project 03 -->
-      <div class="pcard reveal d2">
+      <div class="pcard reveal d2" data-roles="ai fullstack infra" data-project-key="prozonic-erp">
         <div class="pc-num">03 // Digital Transformation</div>
         <div class="pc-title">Prozonic ERP</div>
         <div class="pc-role">AI Integration Lead</div>
@@ -591,7 +679,7 @@
       </div>
 
       <!-- Project 04 -->
-      <div class="pcard reveal">
+      <div class="pcard reveal" data-roles="ai infra security" data-project-key="cloud-sync">
         <div class="pc-num">04 // Network Analytics</div>
         <div class="pc-title">Cloud Sync</div>
         <div class="pc-role">AI Integration Developer</div>
@@ -600,7 +688,7 @@
       </div>
 
       <!-- Project 05 -->
-      <div class="pcard reveal d1">
+      <div class="pcard reveal d1" data-roles="ai security fullstack" data-project-key="sentinel-ping">
         <div class="pc-num">05 // Security Tool</div>
         <div class="pc-title">Sentinel Ping</div>
         <div class="pc-role">Lead AI Developer</div>
@@ -609,7 +697,7 @@
       </div>
       
       <!-- Project 06 -->
-      <div class="pcard reveal d2">
+      <div class="pcard reveal d2" data-roles="ai infra fullstack" data-project-key="asset-nexus">
         <div class="pc-num">06 // Enterprise Portal</div>
         <div class="pc-title">Asset Nexus</div>
         <div class="pc-role">Independent Architect</div>
@@ -618,7 +706,7 @@
       </div>
 
       <!-- Project 07 -->
-      <div class="pcard reveal">
+      <div class="pcard reveal" data-roles="ai security infra fullstack" data-project-key="license-core">
         <div class="pc-num">07 // Software Governance</div>
         <div class="pc-title">License Core</div>
         <div class="pc-role">Lead Architect</div>
@@ -676,6 +764,27 @@
   <p class="footer-copy">© 2026 Valluru Ravikumar · Designed for Scale.</p>
 </footer>
 
+<!-- ── AI RECRUITER CHAT ─────────────────────────────── -->
+<div class="chat-panel" id="chatPanel" aria-live="polite">
+  <div class="chat-head">
+    <div><strong>AI Recruiter Assistant</strong><br><span class="scaits-sub">Answers from this resume only</span></div>
+    <button class="chat-close" onclick="toggleChat(false)" aria-label="Close chat">×</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="msg bot">Hi! Ask me about Ravikumar's AI projects, infrastructure scale, skills, or contact details.</div>
+  </div>
+  <div class="chat-suggestions">
+    <button onclick="askChat('List all 7 projects')">All 7 projects</button>
+    <button onclick="askChat('What AI work has he built?')">AI work</button>
+    <button onclick="askChat('Is he strong in infrastructure?')">Infrastructure</button>
+  </div>
+  <div class="chat-input-row">
+    <input id="chatInput" type="text" placeholder="Ask a recruiter-style question..." autocomplete="off" />
+    <button id="chatSend" onclick="askChat()">Ask</button>
+  </div>
+</div>
+<button class="chat-launcher" onclick="toggleChat()" aria-label="Open AI Recruiter Assistant">🤖</button>
+
 <!-- ── PDF BUTTON ──────────────────────────────────── -->
 <button id="pdfBtn" onclick="window.print()">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -723,64 +832,150 @@
     document.body.classList.toggle('light-mode');
   });
 
-  // Terminal
-  const tBody = document.getElementById('terminalBody');
-  const tInput = document.getElementById('terminalInput');
-  const CMDS = {
-    help: () => [
-      { t: 't-label', v: 'Available Commands:' },
-      { t: 't-out', v: '  skills   - View core competencies' },
-      { t: 't-out', v: '  projects - View software portfolio' },
-      { t: 't-out', v: '  contact  - View contact details' },
-      { t: 't-out', v: '  clear    - Clear console' }
+  // Local AI knowledge base used by terminal, chat and role tailor.
+  const resumeAI = {
+    skills: ['Python', 'Django', 'Flask', 'React.js', 'Next.js', 'Node.js', 'AI/ML', 'Prompt Engineering', 'AI Anomaly Detection', 'WebRTC', 'FFmpeg', 'Azure AD', 'Office 365', 'FortiGate', 'Sophos', 'Meraki API', 'MDM', 'DLP', 'Nagios', 'SQL Server'],
+    projects: [
+      { id: 1, key: 'vision-ai', name: 'Vision AI', tags: ['ai','infra','fullstack','security'], tech: 'Python, Django, WebRTC, FFmpeg, Azure AD', summary: 'Centralized enterprise platform unifying surveillance, networking and cloud services; monitors 20,095+ cameras and 1,263+ devices across 600+ locations.' },
+      { id: 2, key: 'sentient-vista-ai', name: 'Sentient Vista AI', tags: ['ai','fullstack'], tech: 'Python, Facial Recognition, Flask, AI/ML', summary: 'AI-for-Good platform combining facial recognition, attendance and mental-health signals to detect burnout, distress and fatigue patterns.' },
+      { id: 3, key: 'prozonic-erp', name: 'Prozonic ERP', tags: ['ai','fullstack','infra'], tech: 'Django, React.js, AI Forecasting', summary: 'Manufacturing ERP with AI demand forecasting and smart stock-health layer; reduced manual data entry by 95% and protected inventory availability.' },
+      { id: 4, key: 'cloud-sync', name: 'Cloud Sync', tags: ['ai','infra','security'], tech: 'Python, Meraki API, ML Anomaly Detection', summary: 'Real-time network analytics suite for 1,000+ devices and 22,000+ clients with ML-driven traffic anomaly detection.' },
+      { id: 5, key: 'sentinel-ping', name: 'Sentinel Ping', tags: ['ai','security','fullstack'], tech: 'Flask, Predictive ML, SecOps', summary: 'Security-focused health-audit app with multi-IP tests, predictive latency modelling, root-cause hints and command-injection-safe validation.' },
+      { id: 6, key: 'asset-nexus', name: 'Asset Nexus', tags: ['ai','infra','fullstack'], tech: 'Django, Predictive Maintenance', summary: 'Brand-agnostic hardware lifecycle portal with AI-verified asset visibility, predictive maintenance and 90% faster audits.' },
+      { id: 7, key: 'license-core', name: 'License Core', tags: ['ai','security','infra','fullstack'], tech: 'Python, AI Cost Optimization, Compliance', summary: 'Software compliance and lifecycle system using AI to optimize licenses, reduce IT waste, track assignments and trigger expiry notifications.' }
     ],
-    skills: () => [
-      { t: 't-label', v: 'Technical Stack:' },
-      { t: 't-hi', v: '  Python, Django, React, AI/ML, WebRTC, Azure AD, Meraki API, FortiGate.' }
-    ],
-    projects: () => [
-      { t: 't-label', v: 'Key Projects:' },
-      { t: 't-out', v: '  1. Infra Control Hub (20K+ cameras live)' },
-      { t: 't-out', v: '  2. Sentient Vista AI (Facial Rec.)' },
-      { t: 't-out', v: '  3. Prozonic ERP (AI Forecasting)' }
-    ],
-    contact: () => [
-      { t: 't-label', v: 'Contact:' },
-      { t: 't-hi', v: '  Email: valluru.rkchowdary@gmail.com' },
-      { t: 't-hi', v: '  Phone: +91 8008856333' }
-    ],
-    clear: () => 'CLR'
+    roles: {
+      ai: { score: '96%', title: 'Senior IT Infrastructure Manager & <strong>AI Engineer</strong>', chips: ['Python', 'AI/ML', 'Computer Vision', 'Forecasting', 'Anomaly Detection'], summary: 'Strong AI + infrastructure fit: independent AI products across computer vision, forecasting, anomaly detection and predictive maintenance at enterprise scale.', bio: 'AI-focused builder combining 15+ years of infrastructure context with Python, Django, Flask and ML systems to create practical enterprise AI products across surveillance, forecasting, asset intelligence and network analytics.' },
+      infra: { score: '98%', title: 'Senior <strong>IT Infrastructure Leader</strong> & AI Builder', chips: ['500+ Locations', '50K+ Users', 'Azure AD', 'Office 365', '40+ Engineers'], summary: 'Excellent infrastructure leadership fit: proven ownership of distributed sites, cloud identity, enterprise operations and large field teams.', bio: 'Enterprise infrastructure leader managing 500+ locations, 50,000+ users and 40+ field engineers while building automation and AI platforms that improve visibility, uptime and control.' },
+      fullstack: { score: '94%', title: '<strong>Full-Stack Developer</strong> with Enterprise AI Depth', chips: ['Django', 'Flask', 'React.js', 'Node.js', 'APIs'], summary: 'Strong full-stack fit: independently built portals, dashboards, ERP modules and monitoring apps from architecture to deployment.', bio: 'Full-stack engineer delivering production-grade Django, Flask and React platforms with AI layers, API integrations and practical enterprise workflows for infrastructure-heavy environments.' },
+      security: { score: '93%', title: '<strong>Security / Network</strong> Leader with AI Automation', chips: ['FortiGate', 'Sophos', 'VPN', 'DLP', 'Compliance'], summary: 'Strong security/network fit: firewalls, VPN, endpoint protection, compliance, monitoring and AI-assisted anomaly/root-cause workflows.', bio: 'Security-aware infrastructure leader with hands-on FortiGate, Sophos, VPN, DLP, MDM and monitoring experience, enhanced by AI anomaly detection and compliance automation.' }
+    },
+    contact: 'Email: valluru.rkchowdary@gmail.com · Phone: +91 8008856333 · LinkedIn: linkedin.com/in/ravianet/'
   };
 
-  function addLine(cls, text) {
-    const d = document.createElement('div'); d.className = 't-line';
-    d.innerHTML = `<span class="${cls}">${text}</span>`;
+  const tBody = document.getElementById('terminalBody');
+  const tInput = document.getElementById('terminalInput');
+  const chatPanel = document.getElementById('chatPanel');
+  const chatBody = document.getElementById('chatBody');
+  const chatInput = document.getElementById('chatInput');
+  const heroBioText = document.getElementById('heroBioText');
+  let bioTimer;
+
+  function escapeHtml(text) {
+    return String(text).replace(/[&<>'"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[ch]));
+  }
+
+  function projectHtml(projects = resumeAI.projects) {
+    return projects.map(p => `${p.id}. <strong>${escapeHtml(p.name)}</strong> — ${escapeHtml(p.summary)} <em>[${escapeHtml(p.tech)}]</em>`).join('<br>');
+  }
+
+  function findProject(q) {
+    const words = q.toLowerCase();
+    const compact = ` ${words.replace(/[^a-z0-9#]+/g, ' ')} `;
+    return resumeAI.projects.find(p => compact.includes(` project ${p.id} `) || compact.includes(` #${p.id} `) || words.includes(p.key.replaceAll('-', ' ')) || p.name.toLowerCase().split(' ').every(w => words.includes(w)));
+  }
+
+  function buildAnswer(query) {
+    const q = query.toLowerCase();
+    if (q === 'clear') return 'CLR';
+    if (q.includes('help')) return [{ t: 't-label', v: 'Try natural questions:' }, { t: 't-out', v: 'show all 7 projects · tell me about Vision AI · what AI experience? · cloud skills · contact · tailor for security' }];
+    if (q.includes('contact') || q.includes('email') || q.includes('phone')) return [{ t: 't-label', v: 'Contact:' }, { t: 't-hi', v: escapeHtml(resumeAI.contact) }];
+    if (q.includes('all 7') || q.includes('all projects') || q.includes('portfolio')) return [{ t: 't-label', v: 'All 7 Projects:' }, { t: 't-out', v: projectHtml() }];
+    const project = findProject(q);
+    if (project) return [{ t: 't-label', v: `Project ${project.id}: ${escapeHtml(project.name)}` }, { t: 't-out', v: escapeHtml(project.summary) }, { t: 't-hi', v: `Tech: ${escapeHtml(project.tech)}` }];
+    if (q.includes('project') || q.includes('portfolio') || q.includes('all 7')) return [{ t: 't-label', v: 'All 7 Projects:' }, { t: 't-out', v: projectHtml() }];
+    if (q.includes('skill') || q.includes('stack') || q.includes('technology')) return [{ t: 't-label', v: 'Technical Stack:' }, { t: 't-hi', v: escapeHtml(resumeAI.skills.join(' · ')) }];
+    if (q.includes('ai') || q.includes('ml') || q.includes('machine') || q.includes('forecast') || q.includes('anomaly')) return [{ t: 't-label', v: 'AI Experience:' }, { t: 't-out', v: projectHtml(resumeAI.projects.filter(p => p.tags.includes('ai'))) }];
+    if (q.includes('cloud') || q.includes('azure') || q.includes('office') || q.includes('infrastructure') || q.includes('location') || q.includes('users')) return [{ t: 't-label', v: 'Infrastructure Scale:' }, { t: 't-out', v: '15+ years, 500+ locations, 50,000+ users, Azure AD / Office 365, 40+ field engineers and distributed network rollouts.' }];
+    if (q.includes('security') || q.includes('firewall') || q.includes('vpn') || q.includes('compliance')) return [{ t: 't-label', v: 'Security / Network Fit:' }, { t: 't-out', v: 'FortiGate, Sophos, IPSec/SSL VPN, MDM, DLP, endpoint security, compliance tooling and ML-driven anomaly/root-cause workflows.' }];
+    return [{ t: 't-label', v: 'Smart Match:' }, { t: 't-out', v: 'I can answer from this resume. Try: "all 7 projects", "AI experience", "Vision AI", "cloud skills", "security fit", or "contact".' }];
+  }
+
+  function addLine(cls, html) {
+    const d = document.createElement('div');
+    d.className = 't-line';
+    d.innerHTML = `<span class="${cls}">${html}</span>`;
     tBody.appendChild(d);
   }
 
   function runCommand(cmd) {
-    const c = cmd.trim().toLowerCase();
-    const p = document.createElement('div'); p.className = 't-line';
-    p.innerHTML = `<span class="t-prompt">guest@ravikumar-profile:~$</span><span class="t-cmd">${c}</span>`;
+    const raw = (cmd || '').trim();
+    if (!raw) return;
+    const p = document.createElement('div');
+    p.className = 't-line';
+    p.innerHTML = `<span class="t-prompt">guest@ravikumar-profile:~$</span><span class="t-cmd">${escapeHtml(raw)}</span>`;
     tBody.appendChild(p);
-    
-    if (c === 'clear') { tBody.innerHTML = ''; return; }
-    if (c === '') return;
-    
-    if (CMDS[c]) {
-      const res = CMDS[c]();
-      if(res === 'CLR') { tBody.innerHTML=''; return; }
-      res.forEach(r => addLine(r.t, r.v));
-    } else {
-      addLine('t-out', `Command not found: ${c}. Type 'help' for options.`);
-    }
+    const res = buildAnswer(raw);
+    if (res === 'CLR') { tBody.innerHTML = ''; return; }
+    res.forEach(r => addLine(r.t, r.v));
     tBody.scrollTop = tBody.scrollHeight;
     tInput.focus();
+  }
+
+  function typeBio(text) {
+    clearInterval(bioTimer);
+    heroBioText.textContent = '';
+    let i = 0;
+    bioTimer = setInterval(() => {
+      heroBioText.textContent += text.charAt(i++);
+      if (i >= text.length) clearInterval(bioTimer);
+    }, 18);
+  }
+
+  function applyRole(role, btn) {
+    const data = resumeAI.roles[role];
+    if (!data) return;
+    document.querySelectorAll('.persona-btn').forEach(b => b.classList.toggle('active', b.dataset.role === role));
+    if (btn) btn.classList.add('active');
+    document.querySelector('.hero-subtitle').innerHTML = data.title;
+    document.getElementById('matchScore').textContent = data.score;
+    document.getElementById('tailorSummary').textContent = data.summary;
+    document.getElementById('tailorChips').innerHTML = data.chips.map(c => `<span class="pill">${escapeHtml(c)}</span>`).join('');
+    typeBio(data.bio);
+    document.querySelectorAll('.skill-card, .pcard').forEach((el, index) => {
+      const roles = (el.dataset.roles || '').split(' ');
+      const matched = roles.includes(role);
+      el.classList.toggle('role-match', matched);
+      el.classList.toggle('role-soft', !matched);
+      if (el.classList.contains('pcard')) el.style.order = matched ? index : 100 + index;
+    });
+  }
+
+  function toggleChat(force) {
+    chatPanel.classList.toggle('open', typeof force === 'boolean' ? force : !chatPanel.classList.contains('open'));
+    if (chatPanel.classList.contains('open')) chatInput.focus();
+  }
+
+  function addChatMsg(text, who = 'bot', asHtml = false) {
+    const msg = document.createElement('div');
+    msg.className = `msg ${who}`;
+    if (asHtml) msg.innerHTML = text; else msg.textContent = text;
+    chatBody.appendChild(msg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function chatAnswer(question) {
+    const answer = buildAnswer(question);
+    if (answer === 'CLR') return 'Console clear is available in the terminal.';
+    return answer.map(a => a.v).join('<br>');
+  }
+
+  function askChat(prompt) {
+    const question = (prompt || chatInput.value || '').trim();
+    if (!question) return;
+    toggleChat(true);
+    addChatMsg(question, 'user');
+    chatInput.value = '';
+    setTimeout(() => addChatMsg(chatAnswer(question), 'bot', true), 220);
   }
 
   tInput.addEventListener('keydown', e => {
     if(e.key === 'Enter') { runCommand(tInput.value); tInput.value = ''; }
   });
+  chatInput.addEventListener('keydown', e => {
+    if(e.key === 'Enter') askChat();
+  });
+  applyRole('ai');
 </script>
 </body>
 </html>
