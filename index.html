@@ -148,25 +148,47 @@
     body.light-mode .nav-items a { color: #334155; }
     body.light-mode .nav-items a:hover { color: #0f172a; background: rgba(37, 99, 235, 0.08); }
     body.light-mode .nav-linkedin { color: #fff !important; }
+    .nav-main { display: flex; align-items: center; gap: 14px; }
     .nav-items { display: flex; gap: 8px; list-style: none; align-items: center; }
     .nav-items a { 
       font-size: .85rem; font-weight: 600; color: var(--text-2); 
       padding: 8px 16px; border-radius: var(--r-full); transition: all .3s; 
     }
     .nav-items a:hover { color: var(--text-1); background: var(--bg-card); }
+    .nav-controls { display: flex; align-items: center; gap: 10px; }
     
     .theme-toggle,
     .nav-icon-btn {
       background: transparent; border: 1px solid var(--edge-dim); 
       color: var(--text-1); width: 36px; height: 36px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: all .3s; margin-left: 12px;
+      cursor: pointer; transition: all .3s;
     }
     .theme-toggle:hover,
     .nav-icon-btn:hover { background: var(--bg-card); border-color: var(--edge-hi); }
     .theme-toggle svg,
     .nav-icon-btn svg { width: 16px; height: 16px; fill: currentColor; }
-
+    .nav-menu-toggle { display: none; }
+    .nav-menu-toggle span {
+      display: block; width: 16px; height: 2px; background: currentColor; border-radius: 999px;
+      box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 74px; left: 5vw; right: 5vw; z-index: 899;
+      background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid var(--edge-dim); border-radius: 20px; padding: 14px;
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block; padding: 12px 14px; border-radius: 14px; color: var(--text-2);
+      font-size: .92rem; font-weight: 600; transition: all .25s;
+    }
+    .mobile-menu a:hover { background: var(--bg-card); color: var(--text-1); }
+    .mobile-menu .nav-linkedin {
+      display: flex; justify-content: center; margin-top: 8px; padding: 12px 16px !important;
+    }
 
     .nav-linkedin { display: flex; align-items: center; gap: 8px; background: #0077b5; color: #fff !important; padding: 8px 20px !important; }
     .nav-linkedin:hover { background: #006097; transform: translateY(-1px); }
@@ -661,12 +683,16 @@
 
     /* ── RESPONSIVE ──────────────────────────────────── */
     @media(max-width: 900px) {
+      #nav { padding: 0 4vw; }
       .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
       .hero-tag { margin: 0 auto 32px; }
       .hero-bio { margin: 24px auto 0; }
       .hero-chips { justify-content: center; }
       .hero-cta { justify-content: center; flex-wrap: wrap; }
       .nav-items { display: none; }
+      .nav-brand span { font-size: .95rem; }
+      .nav-controls { gap: 8px; }
+      .nav-menu-toggle { display: flex; }
       .skills-grid, .port-grid { grid-template-columns: 1fr; }
       .tailor-card { grid-template-columns: 1fr; }
       .tailor-output { border-left: none; border-top: 1px solid var(--edge-dim); padding-left: 0; padding-top: 28px; }
@@ -699,29 +725,40 @@
     <img src="avatar.png" alt="Ravi Kumar Valluru logo" class="nav-brand-logo"/>
     <span>Ravi Kumar Valluru</span>
   </div>
-  <ul class="nav-items">
-    <li><a href="#terminal-section">Console</a></li>
-    <li><a href="#role-tailor">AI Tailor</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#portfolio">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li>
-      <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener" class="nav-linkedin">
-        LinkedIn
-      </a>
-    </li>
-    <li>
+  <div class="nav-main">
+    <ul class="nav-items">
+      <li><a href="#terminal-section">Console</a></li>
+      <li><a href="#role-tailor">AI Tailor</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li>
+        <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener" class="nav-linkedin">
+          LinkedIn
+        </a>
+      </li>
+    </ul>
+    <div class="nav-controls">
       <a class="nav-icon-btn" id="pdfBtn" href="Resume.pdf" download="Ravi-Kumar-Valluru-Resume.pdf" aria-label="Download Resume PDF" title="Download Resume PDF">
         &#x2B07;
       </a>
-    </li>
-    <li>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle Light/Dark Mode">
         <svg viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.856 5.144a.75.75 0 00-1.06 0l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59a.75.75 0 000-1.061zM6.195 17.805a.75.75 0 00-1.06 0l-1.591 1.59a.75.75 0 101.06 1.06l1.591-1.59a.75.75 0 000-1.06zM21 11.25a.75.75 0 010 1.5h-2.25a.75.75 0 010-1.5H21zM5.25 11.25a.75.75 0 010 1.5H3a.75.75 0 010-1.5h2.25zM18.856 18.856a.75.75 0 000-1.06l-1.591-1.591a.75.75 0 10-1.06 1.061l1.591 1.59a.75.75 0 001.06 0zM6.195 6.195a.75.75 0 000-1.06L4.604 3.544a.75.75 0 10-1.06 1.06l1.591 1.591a.75.75 0 001.06 0zM12 18.75a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z"/></svg>
       </button>
-    </li>
-  </ul>
+      <button class="nav-icon-btn nav-menu-toggle" id="mobileMenuToggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#terminal-section">Console</a>
+  <a href="#role-tailor">AI Tailor</a>
+  <a href="#skills">Skills</a>
+  <a href="#portfolio">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener" class="nav-linkedin">LinkedIn</a>
+</div>
 
 <!-- ── HERO ────────────────────────────────────────── -->
 <section id="hero">
@@ -1104,8 +1141,22 @@
 
   // Theme Toggle
   const themeBtn = document.getElementById('themeToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
   themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
+  });
+  function toggleMobileMenu(force) {
+    const shouldOpen = typeof force === 'boolean' ? force : !mobileMenu.classList.contains('open');
+    mobileMenu.classList.toggle('open', shouldOpen);
+    mobileMenuToggle.setAttribute('aria-expanded', String(shouldOpen));
+  }
+  mobileMenuToggle.addEventListener('click', () => toggleMobileMenu());
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => toggleMobileMenu(false));
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) toggleMobileMenu(false);
   });
 
   // Local AI knowledge base used by terminal, chat and role tailor.
