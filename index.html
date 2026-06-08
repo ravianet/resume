@@ -157,14 +157,17 @@
     }
     .nav-items a:hover { color: var(--text-1); background: var(--bg-card); }
     
-    .theme-toggle {
+    .theme-toggle,
+    .nav-icon-btn {
       background: transparent; border: 1px solid var(--edge-dim); 
       color: var(--text-1); width: 36px; height: 36px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer; transition: all .3s; margin-left: 12px;
     }
-    .theme-toggle:hover { background: var(--bg-card); border-color: var(--edge-hi); }
-    .theme-toggle svg { width: 16px; height: 16px; fill: currentColor; }
+    .theme-toggle:hover,
+    .nav-icon-btn:hover { background: var(--bg-card); border-color: var(--edge-hi); }
+    .theme-toggle svg,
+    .nav-icon-btn svg { width: 16px; height: 16px; fill: currentColor; }
 
     .nav-linkedin { display: flex; align-items: center; gap: 8px; background: #0077b5; color: #fff !important; padding: 8px 20px !important; }
     .nav-linkedin:hover { background: #006097; transform: translateY(-1px); }
@@ -473,10 +476,11 @@
     /* ── AI RECRUITER CHAT ─────────────────────────────── */
     .chat-launcher {
       position: fixed; bottom: 96px; right: 32px; z-index: 820;
-      border-radius: 20px; border: 1px solid rgba(125, 211, 252, 0.28); background: linear-gradient(135deg, rgba(8, 15, 32, 0.96), rgba(17, 24, 39, 0.96));
-      color: #fff; display: inline-flex; align-items: center; gap: 12px; cursor: pointer;
+      width: 58px; height: 58px; padding: 0;
+      border-radius: 18px; border: 1px solid rgba(125, 211, 252, 0.28); background: linear-gradient(135deg, rgba(8, 15, 32, 0.96), rgba(17, 24, 39, 0.96));
+      color: #fff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
       box-shadow: var(--shadow-lg); transition: transform .3s, border-color .3s, box-shadow .3s;
-      padding: 12px 16px 12px 12px; backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
     }
     .chat-launcher:hover { transform: translateY(-4px) scale(1.02); border-color: rgba(125, 211, 252, 0.48); box-shadow: 0 24px 64px rgba(2, 6, 23, 0.62); }
     .chat-launcher-icon {
@@ -484,9 +488,6 @@
       background: var(--grad-accent); box-shadow: 0 10px 24px rgba(99, 102, 241, 0.28);
     }
     .chat-launcher-icon svg { width: 22px; height: 22px; }
-    .chat-launcher-copy { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.15; }
-    .chat-launcher-copy strong { font-family: 'Outfit', sans-serif; font-size: .92rem; }
-    .chat-launcher-copy span { font-size: .72rem; color: var(--text-3); letter-spacing: .08em; text-transform: uppercase; }
     .chat-panel {
       position: fixed; right: 32px; bottom: 168px; z-index: 821; width: min(390px, calc(100vw - 32px));
       background: linear-gradient(180deg, rgba(11, 16, 32, 0.97), rgba(6, 10, 24, 0.98)); border: 1px solid rgba(125, 211, 252, 0.16); border-radius: var(--r-xl);
@@ -629,15 +630,27 @@
 
     /* ── PDF BUTTON ──────────────────────────────────── */
     #pdfBtn {
-      position: fixed; bottom: 32px; right: 32px; z-index: 800;
-      display: flex; align-items: center; gap: 12px;
-      background: var(--text-1); color: var(--bg-base);
-      font-weight: 600; font-size: .9rem; font-family: 'Plus Jakarta Sans', sans-serif;
-      padding: 14px 24px; border-radius: var(--r-full); border: none; cursor: pointer;
-      box-shadow: var(--shadow-sm); transition: transform .3s, box-shadow .3s;
+      margin-left: 0;
+      background: linear-gradient(135deg, rgba(8, 15, 32, 0.94), rgba(17, 24, 39, 0.92));
+      border-color: rgba(59, 130, 246, 0.28);
+      box-shadow: 0 12px 28px rgba(2, 6, 23, 0.24), 0 0 0 1px rgba(255,255,255,0.03);
+      backdrop-filter: blur(18px);
     }
-    #pdfBtn:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    #pdfBtn svg { width: 18px; height: 18px; }
+    #pdfBtn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.5);
+      box-shadow: 0 16px 36px rgba(2, 6, 23, 0.28), 0 0 28px rgba(59, 130, 246, 0.18);
+    }
+    body.light-mode #pdfBtn {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.96));
+      color: #0f172a;
+      border-color: rgba(37, 99, 235, 0.22);
+      box-shadow: 0 12px 24px rgba(148, 163, 184, 0.16);
+    }
+    body.light-mode #pdfBtn:hover {
+      border-color: rgba(37, 99, 235, 0.4);
+      box-shadow: 0 16px 30px rgba(148, 163, 184, 0.22), 0 0 20px rgba(37, 99, 235, 0.12);
+    }
 
     /* ── FOOTER ──────────────────────────────────────── */
     footer { padding: 80px 5vw; text-align: center; border-top: 1px solid var(--edge-dim); background: var(--bg-surface); }
@@ -659,8 +672,7 @@
       .tailor-card { grid-template-columns: 1fr; }
       .tailor-output { border-left: none; border-top: 1px solid var(--edge-dim); padding-left: 0; padding-top: 28px; }
       .persona-grid { grid-template-columns: 1fr; }
-      .chat-launcher { right: 18px; bottom: 88px; padding-right: 14px; }
-      .chat-launcher-copy span { display: none; }
+      .chat-launcher { right: 18px; bottom: 88px; }
       .chat-panel { right: 16px; bottom: 154px; }
     }
 
@@ -695,6 +707,11 @@
       <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener" class="nav-linkedin">
         LinkedIn
       </a>
+    </li>
+    <li>
+      <button class="nav-icon-btn" id="pdfBtn" onclick="window.print()" aria-label="Download Resume PDF" title="Download Resume PDF">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </button>
     </li>
     <li>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle Light/Dark Mode">
@@ -1010,7 +1027,7 @@
     <a href="tel:+918008856333">+91 8008856333</a>
     <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
-  <p class="footer-copy">© 2026 Valluru Ravikumar · Designed for Scale.</p>
+  <p class="footer-copy">© 2026 Valluru Ravikumar · Building enterprise systems with AI intelligence.</p>
 </footer>
 
 <!-- ── AI RECRUITER CHAT ─────────────────────────────── -->
@@ -1044,16 +1061,6 @@
       <path d="M9 11h.01M15 11h.01M8.5 15h7"/>
     </svg>
   </span>
-  <span class="chat-launcher-copy">
-    <strong>AI Recruiter</strong>
-    <span>Live Resume Guide</span>
-  </span>
-</button>
-
-<!-- ── PDF BUTTON ──────────────────────────────────── -->
-<button id="pdfBtn" onclick="window.print()">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-  Save Resume PDF
 </button>
 
 <script>
