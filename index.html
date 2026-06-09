@@ -1196,6 +1196,30 @@
     return projects.map(p => `${p.id}. <strong>${escapeHtml(p.name)}</strong> — ${escapeHtml(p.summary)} <em>[${escapeHtml(p.tech)}]</em>`).join('<br>');
   }
 
+  function searchProjectsByKeyword(query) {
+    const cleaned = query.toLowerCase().replace(/[^a-z0-9+#.\s/-]+/g, ' ').trim();
+    if (!cleaned) return [];
+
+    const tokens = cleaned.split(/\s+/).filter(Boolean);
+    const stopWords = new Set([
+      'show', 'me', 'all', 'project', 'projects', 'related', 'about', 'with', 'using',
+      'for', 'find', 'search', 'skill', 'skills', 'experience', 'work', 'tell', 'what',
+      'has', 'he', 'his', 'is', 'are', 'the', 'in', 'on', 'to'
+    ]);
+    const terms = tokens.filter(token => !stopWords.has(token));
+    if (!terms.length) return [];
+
+    return resumeAI.projects.filter(project => {
+      const haystack = [
+        project.name,
+        project.tech,
+        project.summary,
+        ...(project.tags || [])
+      ].join(' ').toLowerCase();
+      return terms.every(term => haystack.includes(term));
+    });
+  }
+
   function findProject(q) {
     const words = q.toLowerCase();
     const compact = ` ${words.replace(/[^a-z0-9#]+/g, ' ')} `;
@@ -1210,6 +1234,14 @@
     if (q.includes('all 7') || q.includes('all projects') || q.includes('portfolio')) return [{ t: 't-label', v: 'All 7 Projects:' }, { t: 't-out', v: projectHtml() }];
     const project = findProject(q);
     if (project) return [{ t: 't-label', v: `Project ${project.id}: ${escapeHtml(project.name)}` }, { t: 't-out', v: escapeHtml(project.summary) }, { t: 't-hi', v: `Tech: ${escapeHtml(project.tech)}` }];
+    const keywordMatches = searchProjectsByKeyword(q);
+    if (keywordMatches.length) {
+      const cleanedLabel = q.trim().replace(/\s+/g, ' ');
+      return [
+        { t: 't-label', v: `Matching projects for "${escapeHtml(cleanedLabel)}":` },
+        { t: 't-out', v: projectHtml(keywordMatches) }
+      ];
+    }
     if (q.includes('project') || q.includes('portfolio') || q.includes('all 7')) return [{ t: 't-label', v: 'All 7 Projects:' }, { t: 't-out', v: projectHtml() }];
     if (q.includes('skill') || q.includes('stack') || q.includes('technology')) return [{ t: 't-label', v: 'Technical Stack:' }, { t: 't-hi', v: escapeHtml(resumeAI.skills.join(' · ')) }];
     if (q.includes('ai') || q.includes('ml') || q.includes('machine') || q.includes('forecast') || q.includes('anomaly')) return [{ t: 't-label', v: 'AI Experience:' }, { t: 't-out', v: projectHtml(resumeAI.projects.filter(p => p.tags.includes('ai'))) }];
