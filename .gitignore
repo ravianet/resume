@@ -2,3 +2,4 @@
 *.docx~
 extract_resume.py
 resume_text.txt
+push_to_github.bat
