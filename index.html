@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ravi Kumar Valluru — Senior IT Leader & AI Developer</title>
+  <meta name="description" content="Ravi Kumar Valluru | Senior IT Infrastructure Manager & AI Full-Stack Developer with 15+ years of experience. Scaling high-availability enterprise systems for 500+ locations and 50,000+ users."/>
+  <meta property="og:title" content="Ravi Kumar Valluru — IT Leader & AI Developer"/>
+  <meta property="og:description" content="15+ years IT leadership. AI full-stack developer. 500+ locations, 50K+ users. Hyderabad, India."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://ravianet.github.io/rusume/"/>
+  <meta property="og:image" content="https://ravianet.github.io/rusume/avatar.png"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231f2937%22/><text x=%2250%22 y=%2268%22 font-family=%22sans-serif%22 font-size=%2255%22 font-weight=%22bold%22 fill=%22%233b82f6%22 text-anchor=%22middle%22>RK</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── RESET & TOKENS ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-base:      #050816;
+      --bg-surface:   #0b1020;
+      --bg-surface-2: #11182d;
+      --bg-card:      rgba(148, 163, 184, 0.08);
+      --bg-glass:     rgba(7, 12, 27, 0.72);
+
+      --edge-dim:     rgba(148, 163, 184, 0.14);
+      --edge-hi:      rgba(125, 211, 252, 0.34);
+
+      --text-1:       #f8fbff;
+      --text-2:       #b8c4dc;
+      --text-3:       #7c8aa5;
+
+      --accent-1:     #38bdf8;
+      --accent-2:     #6366f1;
+      --accent-3:     #a855f7;
+      --accent-glow:  rgba(56, 189, 248, 0.22);
+      --grad-text:    linear-gradient(135deg, #ffffff 0%, #dbeafe 45%, #a5b4fc 100%);
+      --grad-accent:  linear-gradient(135deg, #38bdf8 0%, #6366f1 52%, #a855f7 100%);
+
+      --shadow-sm:    0 10px 24px rgba(2, 6, 23, 0.32);
+      --shadow-lg:    0 24px 80px rgba(2, 6, 23, 0.58), 0 0 0 1px rgba(148, 163, 184, 0.08), inset 0 1px 0 rgba(255,255,255,0.04);
+
+      --r-xl: 24px; --r-lg: 16px; --r-md: 12px; --r-sm: 8px; --r-full: 9999px;
+    }
+
+    body.light-mode {
+      /* Light Theme - Softened */
+      --bg-base:      #eef2ff;
+      --bg-surface:   #ffffff;
+      --bg-surface-2: #f8fbff;
+      --bg-card:      #ffffff;
+      --bg-glass:     rgba(243, 244, 246, 0.8);
+      
+      --edge-dim:     rgba(0, 0, 0, 0.06);
+      --edge-hi:      rgba(0, 0, 0, 0.15);
+      
+      --text-1:       #1f2937; /* Soft dark gray text instead of pure black */
+      --text-2:       #4b5563;
+      --text-3:       #9ca3af;
+      
+      --accent-1:     #2563eb;
+      --accent-2:     #4f46e5;
+      --accent-3:     #9333ea;
+      --accent-glow:  rgba(37, 99, 235, 0.1);
+      --grad-text:    linear-gradient(135deg, #111827, #334155);
+      --grad-accent:  linear-gradient(135deg, #2563eb 0%, #4f46e5 52%, #9333ea 100%);
+      
+      --shadow-sm:    0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg:    0 16px 32px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.03);
+    }
+    body.light-mode {
+      background:
+        radial-gradient(circle at top right, rgba(79, 70, 229, 0.12), transparent 22%),
+        radial-gradient(circle at left center, rgba(37, 99, 235, 0.1), transparent 24%),
+        linear-gradient(180deg, #f8fbff 0%, #eef2ff 42%, #e6ecff 100%);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { 
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif; 
+      background:
+        radial-gradient(circle at top right, rgba(99, 102, 241, 0.14), transparent 24%),
+        radial-gradient(circle at left center, rgba(56, 189, 248, 0.12), transparent 26%),
+        linear-gradient(180deg, #030712 0%, var(--bg-base) 30%, #040917 100%);
+      color: var(--text-1); 
+      line-height: 1.7; 
+      overflow-x: hidden; 
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--edge-hi); border-radius: 3px; }
+    
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* Noise Texture */
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23a)' opacity='0.03'/%3E%3C/svg%3E");
+      opacity: 1;
+    }
+    body.light-mode::before { opacity: 0.5; }
+    body::after {
+      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.045) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(circle at center, black 22%, transparent 82%);
+      opacity: 0.42;
+    }
+    body.light-mode::after { opacity: 0.16; }
+
+    /* Scroll Progress Bar */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; background: var(--accent-1);
+      z-index: 9999; width: 0%; box-shadow: 0 0 10px var(--accent-1); transition: width 0.1s;
+    }
+
+    /* ── NAV ─────────────────────────────────────────── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      height: 70px; display: flex; align-items: center; justify-content: space-between; 
+      padding: 0 5vw; background: transparent; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #nav.scrolled { 
+      background: var(--bg-glass); 
+      backdrop-filter: blur(24px) saturate(180%);
+      border-bottom: 1px solid var(--edge-dim); 
+      height: 60px;
+    }
+
+    .nav-brand { 
+      font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: -.02em;
+      display: inline-flex; align-items: center; gap: 12px;
+    }
+    .nav-brand-logo {
+      width: 34px; height: 34px; border-radius: 12px; object-fit: cover;
+      border: 1px solid rgba(125, 211, 252, 0.32);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 24px rgba(56, 189, 248, 0.12);
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.24), rgba(168, 85, 247, 0.2));
+    }
+    body.light-mode .nav-items a { color: #334155; }
+    body.light-mode .nav-items a:hover { color: #0f172a; background: rgba(37, 99, 235, 0.08); }
+    body.light-mode .nav-linkedin { color: #fff !important; }
+    .nav-main { display: flex; align-items: center; gap: 14px; }
+    .nav-items { display: flex; gap: 8px; list-style: none; align-items: center; }
+    .nav-items a { 
+      font-size: .85rem; font-weight: 600; color: var(--text-2); 
+      padding: 8px 16px; border-radius: var(--r-full); transition: all .3s; 
+    }
+    .nav-items a:hover { color: var(--text-1); background: var(--bg-card); }
+    .nav-controls { display: flex; align-items: center; gap: 10px; }
+    
+    .theme-toggle,
+    .nav-icon-btn {
+      background: transparent; border: 1px solid var(--edge-dim); 
+      color: var(--text-1); width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all .3s;
+    }
+    .theme-toggle:hover,
+    .nav-icon-btn:hover { background: var(--bg-card); border-color: var(--edge-hi); }
+    .theme-toggle svg,
+    .nav-icon-btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .nav-menu-toggle { display: none; }
+    .nav-menu-toggle span {
+      display: block; width: 16px; height: 2px; background: currentColor; border-radius: 999px;
+      box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 74px; left: 5vw; right: 5vw; z-index: 899;
+      background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid var(--edge-dim); border-radius: 20px; padding: 14px;
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block; padding: 12px 14px; border-radius: 14px; color: var(--text-2);
+      font-size: .92rem; font-weight: 600; transition: all .25s;
+    }
+    .mobile-menu a:hover { background: var(--bg-card); color: var(--text-1); }
+    .mobile-menu .nav-linkedin {
+      display: flex; justify-content: center; margin-top: 8px; padding: 12px 16px !important;
+    }
+
+    .nav-linkedin { display: flex; align-items: center; gap: 8px; background: #0077b5; color: #fff !important; padding: 8px 20px !important; }
+    .nav-linkedin:hover { background: #006097; transform: translateY(-1px); }
+
+    /* ── HERO ────────────────────────────────────────── */
+    #hero { 
+      min-height: 100vh; position: relative; display: flex; align-items: center; 
+      padding: 140px 5vw 80px; overflow: hidden;
+    }
+    #hero::before {
+      content: ''; position: absolute; inset: 7% 5% auto auto; width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(99, 102, 241, 0) 72%);
+      pointer-events: none;
+    }
+    #hero::after {
+      content: ''; position: absolute; inset: auto auto 10% 0; width: 440px; height: 440px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.14) 0%, rgba(56, 189, 248, 0) 76%);
+      pointer-events: none;
+    }
+    
+    /* Elegant Glowing Orbs */
+    .orb { position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none; opacity: 0.6; }
+    .o1 { width: 600px; height: 600px; background: var(--accent-1); top: -200px; right: -100px; }
+    .o2 { width: 500px; height: 500px; background: var(--accent-2); bottom: -100px; left: -100px; }
+    body.light-mode .orb { opacity: 0.15; filter: blur(80px); }
+
+    .hero-inner { position: relative; z-index: 1; width: 100%; max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center; }
+    
+    .hero-top-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; animation: fadeUp .8s ease both; }
+    .hero-tag { 
+      display: inline-flex; align-items: center; gap: 8px; 
+      background: var(--bg-card); border: 1px solid var(--edge-dim); backdrop-filter: blur(10px);
+      border-radius: var(--r-full); padding: 6px 20px; 
+    }
+    .tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-1); box-shadow: 0 0 10px var(--accent-1); animation: blink 2s ease infinite; }
+    .hero-tag span { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-2); }
+    
+    .avail-badge {
+      display: inline-flex; align-items: center; gap: 8px; 
+      background: rgba(40, 200, 64, 0.1); border: 1px solid rgba(40, 200, 64, 0.2); 
+      border-radius: var(--r-full); padding: 6px 20px;
+    }
+    .avail-dot { width: 6px; height: 6px; border-radius: 50%; background: #28c840; box-shadow: 0 0 10px #28c840; animation: blink 2s ease infinite; }
+    .avail-badge span { font-size: .75rem; font-weight: 700; letter-spacing: .05em; color: #28c840; text-transform: uppercase; }
+
+    .hero-name { font-family: 'Outfit', sans-serif; font-size: clamp(3.5rem, 6vw, 5.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -.03em; animation: fadeUp .8s .1s ease both; }
+    .name-gradient { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    body.light-mode .hero-name { color: #0f172a; }
+    body.light-mode .name-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 35%, #2563eb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .hero-subtitle { margin-top: 24px; font-size: 1.25rem; font-weight: 500; color: var(--text-2); line-height: 1.5; animation: fadeUp .8s .2s ease both; }
+    .hero-subtitle strong { color: var(--accent-1); }
+    
+    .hero-bio { font-size: 1.05rem; color: var(--text-2); line-height: 1.8; max-width: 540px; margin-top: 24px; animation: fadeUp .8s .3s ease both; }
+    .typing-cursor { color: var(--accent-1); animation: blink 1s step-end infinite; font-weight: 700; }
+    .ai-highlight { color: var(--accent-1); font-weight: 700; }
+    .hero-microcopy {
+      margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; max-width: 620px;
+      animation: fadeUp .8s .35s ease both;
+    }
+    .hero-metric {
+      padding: 10px 16px; border-radius: var(--r-full); border: 1px solid var(--edge-dim);
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.58), rgba(15, 23, 42, 0.24));
+      color: var(--text-2); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    body.light-mode .hero-metric {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 245, 249, 0.92));
+      color: #334155;
+      border-color: rgba(148, 163, 184, 0.28);
+      box-shadow: 0 10px 22px rgba(148, 163, 184, 0.16);
+    }
+    
+    /* Minimal Contact Chips */
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; animation: fadeUp .8s .4s ease both; }
+    .chip { 
+      display: inline-flex; align-items: center; gap: 8px; 
+      border: 1px solid var(--edge-dim); border-radius: var(--r-full); 
+      padding: 8px 18px; font-size: .85rem; font-weight: 600; color: var(--text-2); 
+      background: var(--bg-surface); transition: all .3s; cursor: pointer;
+    }
+    .chip:hover { border-color: var(--edge-hi); color: var(--text-1); background: var(--bg-card); transform: translateY(-2px); }
+    .chip-icon { font-size: 1rem; }
+    body.light-mode .chip {
+      background: rgba(255, 255, 255, 0.98);
+      color: #334155;
+      border-color: rgba(148, 163, 184, 0.26);
+      box-shadow: 0 10px 24px rgba(148, 163, 184, 0.12);
+    }
+    body.light-mode .chip:hover { color: #0f172a; background: #fff; }
+    
+    .hero-cta { display: flex; gap: 16px; margin-top: 48px; animation: fadeUp .8s .5s ease both; }
+    .btn-primary { 
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--grad-accent); color: #fff; font-family: 'Outfit', sans-serif;
+      font-weight: 700; font-size: .95rem; padding: 14px 32px; border-radius: var(--r-full); 
+      transition: transform .3s, box-shadow .3s; box-shadow: 0 18px 42px rgba(56, 189, 248, 0.18);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 22px 48px rgba(56, 189, 248, 0.26); }
+    body.light-mode .btn-primary:hover { box-shadow: 0 16px 32px rgba(37, 99, 235, 0.18); }
+    
+    .btn-secondary { 
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: transparent; color: var(--text-1); font-family: 'Outfit', sans-serif;
+      font-weight: 600; font-size: .95rem; padding: 14px 32px; border-radius: var(--r-full); 
+      border: 1px solid var(--edge-dim); transition: all .3s; 
+    }
+    .btn-secondary:hover { border-color: var(--edge-hi); background: var(--bg-card); transform: translateY(-2px); }
+
+    /* Modern Stats Panel */
+    .hero-right { animation: fadeUp 1s .6s ease both; }
+    .stats-card { 
+      background:
+        linear-gradient(180deg, rgba(14, 23, 42, 0.96), rgba(7, 13, 27, 0.96)),
+        var(--bg-surface);
+      border: 1px solid rgba(125, 211, 252, 0.16); 
+      border-radius: var(--r-xl); padding: 40px; 
+      box-shadow: var(--shadow-lg); position: relative; overflow: hidden;
+    }
+    .stats-card::before {
+      content: ''; position: absolute; inset: 0 auto auto 0; width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.7), rgba(168, 85, 247, 0.7), transparent);
+    }
+    .stats-card::after {
+      content: ''; position: absolute; inset: 24px 24px auto auto; width: 120px; height: 120px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    body.light-mode .stats-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.96));
+      border-color: rgba(148, 163, 184, 0.24);
+      box-shadow: 0 24px 48px rgba(148, 163, 184, 0.18);
+    }
+    body.light-mode .stat-val,
+    body.light-mode .profile-name,
+    body.light-mode .monogram { color: #0f172a; }
+    body.light-mode .profile-role,
+    body.light-mode .stat-desc { color: #475569; }
+    body.light-mode .profile-kicker { color: #0369a1; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .stat-item { display: flex; flex-direction: column; gap: 4px; }
+    .stat-val { font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--text-1); line-height: 1; }
+    .stat-desc { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--text-3); }
+    
+    .profile-banner { 
+      margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--edge-dim);
+      display: flex; align-items: center; gap: 16px;
+    }
+    .avatar-wrap { 
+      width: 60px; height: 60px; border-radius: 50%; background: var(--bg-card); 
+      border: 1px solid var(--edge-dim); display: flex; align-items: center; justify-content: center; 
+    }
+    .monogram { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--text-1); }
+    .profile-avatar { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .profile-info { flex: 1; }
+    .profile-name { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text-1); }
+    .profile-role { font-size: .85rem; color: var(--text-2); }
+    .profile-kicker {
+      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px;
+      font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: #7dd3fc;
+    }
+    .profile-kicker::before {
+      content: ''; width: 8px; height: 8px; border-radius: 50%; background: #22d3ee; box-shadow: 0 0 14px #22d3ee;
+    }
+
+    /* ── SECTION BASE ────────────────────────────────── */
+    section { padding: 120px 5vw; position: relative; z-index: 1; }
+    .wrap { max-width: 1280px; margin: 0 auto; }
+    .sec-header { margin-bottom: 64px; max-width: 600px; }
+    .sec-eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-1); margin-bottom: 12px; display: block; }
+    .sec-title { font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.1; color: var(--text-1); letter-spacing: -.02em; }
+    
+    /* Animations */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes blink { 0%,100%{opacity:1}50%{opacity:.4} }
+    
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; }
+
+    /* ── TERMINAL / AI CONSOLE ───────────────────────── */
+    #terminal-section { 
+      border-top: 1px solid var(--edge-dim); border-bottom: 1px solid var(--edge-dim);
+      background:
+        radial-gradient(circle at top center, rgba(56, 189, 248, 0.08), transparent 36%),
+        linear-gradient(180deg, rgba(8, 15, 32, 0.92), rgba(5, 10, 23, 0.98));
+    }
+    .terminal-wrap { max-width: 900px; margin: 0 auto; }
+    .terminal-box { 
+      background: #030712; border: 1px solid rgba(125, 211, 252, 0.16); 
+      border-radius: 22px; overflow: hidden; box-shadow: var(--shadow-lg); 
+      font-family: 'JetBrains Mono', monospace; position: relative;
+    }
+    .terminal-box::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background:
+        linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(56, 189, 248, 0.08), transparent 18%);
+      background-size: 100% 3px, 100% 100%;
+      opacity: 0.55;
+    }
+    body.light-mode .terminal-box {
+      background: #ffffff;
+      border-color: rgba(148, 163, 184, 0.24);
+      box-shadow: 0 24px 48px rgba(148, 163, 184, 0.18);
+    }
+    body.light-mode .terminal-box::before { opacity: 0.2; }
+    .terminal-topbar { 
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(2, 6, 23, 0.96)); padding: 14px 20px; 
+      display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(125, 211, 252, 0.12); 
+    }
+    body.light-mode .terminal-topbar {
+      background: linear-gradient(180deg, #eff6ff, #e2e8f0);
+      border-bottom-color: rgba(148, 163, 184, 0.24);
+    }
+    .t-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .t-red { background: #ff5f57; } .t-yellow { background: #febc2e; } .t-green { background: #28c840; }
+    .t-title { font-size: .75rem; color: var(--text-3); margin-left: 12px; }
+    .t-status {
+      margin-left: auto; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
+      color: #7dd3fc; border: 1px solid rgba(125, 211, 252, 0.18); border-radius: var(--r-full);
+      padding: 6px 10px; background: rgba(8, 47, 73, 0.35);
+    }
+    
+    .terminal-body { padding: 24px; min-height: 300px; max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+    .t-line { font-size: .85rem; line-height: 1.6; display: flex; flex-wrap: wrap; }
+    .t-prompt { color: var(--accent-1); margin-right: 12px; }
+    .t-cmd { color: var(--text-1); }
+    .t-out { color: var(--text-2); width: 100%; }
+    .t-hi { color: var(--text-1); font-weight: 500; }
+    .t-label { color: var(--accent-2); font-weight: 500; margin-top: 8px; }
+    
+    .terminal-input-row { padding: 16px 24px; border-top: 1px solid rgba(125, 211, 252, 0.12); display: flex; align-items: center; gap: 12px; background: rgba(2, 6, 23, 0.72); }
+    body.light-mode .terminal-input-row {
+      background: #f8fafc;
+      border-top-color: rgba(148, 163, 184, 0.24);
+    }
+    #terminalInput { 
+      flex: 1; background: transparent; border: none; outline: none; color: var(--text-1); 
+      font-family: 'JetBrains Mono', monospace; font-size: .85rem; caret-color: var(--accent-1); 
+    }
+    #terminalInput::placeholder { color: var(--text-3); }
+    body.light-mode .t-cmd,
+    body.light-mode .t-hi { color: #0f172a; }
+    body.light-mode .t-out { color: #334155; }
+    body.light-mode .t-title { color: #64748b; }
+    body.light-mode .t-status {
+      color: #0369a1;
+      background: rgba(14, 165, 233, 0.08);
+      border-color: rgba(14, 165, 233, 0.18);
+    }
+    .t-hint-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; justify-content: center; }
+    .t-hint-btn { 
+      font-family: 'JetBrains Mono', monospace; font-size: .75rem; 
+      padding: 6px 14px; border-radius: var(--r-full); border: 1px solid var(--edge-dim);
+      color: var(--text-2); background: rgba(8, 15, 32, 0.4); cursor: pointer; transition: all .2s;
+    }
+    .t-hint-btn:hover { color: var(--text-1); border-color: var(--accent-1); background: rgba(56, 189, 248, 0.1); }
+    body.light-mode .t-hint-btn {
+      background: rgba(255, 255, 255, 0.92);
+      color: #334155;
+      border-color: rgba(148, 163, 184, 0.24);
+    }
+    body.light-mode .t-hint-btn:hover {
+      color: #0f172a;
+      background: #fff;
+    }
+
+    /* ── AI ROLE TAILOR ───────────────────────────────── */
+    #role-tailor { background: var(--bg-base); border-bottom: 1px solid var(--edge-dim); }
+    .tailor-card {
+      background: linear-gradient(180deg, rgba(11, 16, 32, 0.96), rgba(7, 12, 26, 0.96)); border: 1px solid rgba(125, 211, 252, 0.14);
+      border-radius: var(--r-xl); padding: 36px; box-shadow: var(--shadow-sm);
+      display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 32px; align-items: start;
+    }
+    body.light-mode .tailor-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 255, 0.96));
+      border-color: rgba(148, 163, 184, 0.24);
+      box-shadow: 0 24px 48px rgba(148, 163, 184, 0.16);
+    }
+    .persona-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .persona-btn {
+      text-align: left; border: 1px solid var(--edge-dim); background: linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(8, 14, 30, 0.88));
+      color: var(--text-2); border-radius: var(--r-lg); padding: 16px; cursor: pointer;
+      transition: all .3s; font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    body.light-mode .persona-btn {
+      background: linear-gradient(180deg, #ffffff, #f8fafc);
+      color: #475569;
+      border-color: rgba(148, 163, 184, 0.24);
+    }
+    body.light-mode .persona-btn strong { color: #0f172a; }
+    body.light-mode .tailor-output { border-left-color: rgba(148, 163, 184, 0.24); }
+    body.light-mode .tailor-summary { color: #334155; }
+    .persona-btn strong { display: block; color: var(--text-1); margin-bottom: 4px; }
+    .persona-btn.active, .persona-btn:hover { border-color: var(--accent-1); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .tailor-output { border-left: 1px solid var(--edge-dim); padding-left: 32px; }
+    .match-score { font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 800; color: var(--accent-1); line-height: 1; }
+    .tailor-summary { color: var(--text-2); margin: 16px 0 20px; }
+    .tailor-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    /* ── AI RECRUITER CHAT ─────────────────────────────── */
+    .chat-launcher {
+      position: fixed; bottom: 96px; right: 32px; z-index: 820;
+      width: 58px; height: 58px; padding: 0;
+      border-radius: 18px; border: 1px solid rgba(125, 211, 252, 0.28); background: linear-gradient(135deg, rgba(8, 15, 32, 0.96), rgba(17, 24, 39, 0.96));
+      color: #fff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+      box-shadow: var(--shadow-lg); transition: transform .3s, border-color .3s, box-shadow .3s;
+      backdrop-filter: blur(18px);
+    }
+    .chat-launcher:hover { transform: translateY(-4px) scale(1.02); border-color: rgba(125, 211, 252, 0.48); box-shadow: 0 24px 64px rgba(2, 6, 23, 0.62); }
+    .chat-launcher-icon {
+      width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center;
+      background: var(--grad-accent); box-shadow: 0 10px 24px rgba(99, 102, 241, 0.28);
+    }
+    .chat-launcher-icon svg { width: 22px; height: 22px; }
+    .chat-panel {
+      position: fixed; right: 32px; bottom: 168px; z-index: 821; width: min(390px, calc(100vw - 32px));
+      background: linear-gradient(180deg, rgba(11, 16, 32, 0.97), rgba(6, 10, 24, 0.98)); border: 1px solid rgba(125, 211, 252, 0.16); border-radius: var(--r-xl);
+      box-shadow: var(--shadow-lg); overflow: hidden; display: none;
+    }
+    body.light-mode .chat-launcher {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.96));
+      border-color: rgba(148, 163, 184, 0.26);
+      box-shadow: 0 20px 36px rgba(148, 163, 184, 0.22);
+      color: #0f172a;
+    }
+    body.light-mode .chat-panel {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 255, 0.98));
+      border-color: rgba(148, 163, 184, 0.24);
+      box-shadow: 0 24px 48px rgba(148, 163, 184, 0.2);
+    }
+    .chat-panel.open { display: block; animation: fadeUp .25s ease both; }
+    .chat-head { padding: 18px 20px; border-bottom: 1px solid rgba(125, 211, 252, 0.12); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(180deg, rgba(17, 24, 39, 0.84), rgba(6, 10, 24, 0.5)); }
+    .chat-head strong { font-family: 'Outfit', sans-serif; }
+    .chat-close { background: transparent; border: none; color: var(--text-2); font-size: 1.3rem; cursor: pointer; }
+    body.light-mode .chat-head {
+      background: linear-gradient(180deg, #eff6ff, #f8fafc);
+      border-bottom-color: rgba(148, 163, 184, 0.24);
+    }
+    .chat-status {
+      margin-top: 6px; display: inline-flex; align-items: center; gap: 8px; font-size: .68rem;
+      color: #7dd3fc; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .chat-status::before {
+      content: ''; width: 7px; height: 7px; border-radius: 50%; background: #22d3ee; box-shadow: 0 0 12px #22d3ee;
+    }
+    .chat-body { height: 320px; overflow-y: auto; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+    .msg { padding: 10px 14px; border-radius: 16px; font-size: .88rem; line-height: 1.55; max-width: 88%; }
+    .msg.bot { background: rgba(15, 23, 42, 0.85); color: var(--text-2); border: 1px solid rgba(125, 211, 252, 0.12); align-self: flex-start; }
+    .msg.user { background: var(--grad-accent); color: #fff; align-self: flex-end; box-shadow: 0 10px 24px rgba(99, 102, 241, 0.2); }
+    body.light-mode .msg.bot {
+      background: #ffffff;
+      color: #334155;
+      border-color: rgba(148, 163, 184, 0.24);
+    }
+    .chat-suggestions { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 18px 14px; }
+    .chat-suggestions button { border: 1px solid var(--edge-dim); border-radius: var(--r-full); background: rgba(8, 15, 32, 0.46); color: var(--text-2); padding: 6px 10px; font-size: .75rem; cursor: pointer; }
+    .chat-input-row { display: flex; gap: 10px; padding: 14px; border-top: 1px solid var(--edge-dim); }
+    #chatInput { flex: 1; border: 1px solid var(--edge-dim); background: rgba(2, 6, 23, 0.86); color: var(--text-1); border-radius: var(--r-full); padding: 10px 14px; outline: none; }
+    #chatSend { border: none; background: var(--grad-accent); color: #fff; border-radius: var(--r-full); padding: 0 16px; font-weight: 700; cursor: pointer; }
+    body.light-mode .chat-suggestions button {
+      background: rgba(255, 255, 255, 0.94);
+      color: #334155;
+      border-color: rgba(148, 163, 184, 0.24);
+    }
+    body.light-mode #chatInput {
+      background: #ffffff;
+      color: #0f172a;
+      border-color: rgba(148, 163, 184, 0.24);
+    }
+
+    /* ── SKILLS ──────────────────────────────────────── */
+    .skill-filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+    .filter-tab { 
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: .85rem; font-weight: 600; 
+      padding: 10px 24px; border-radius: var(--r-full); cursor: pointer; 
+      border: 1px solid var(--edge-dim); color: var(--text-2); background: transparent; 
+      transition: all .3s; 
+    }
+    .filter-tab:hover { border-color: var(--edge-hi); color: var(--text-1); }
+    .filter-tab.active { background: var(--text-1); color: var(--bg-base); border-color: transparent; }
+    
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .skill-card { 
+      background: var(--bg-surface); border: 1px solid var(--edge-dim); 
+      border-radius: var(--r-xl); padding: 32px; transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative; overflow: hidden;
+    }
+    .skill-card::before {
+      content: ''; position: absolute; inset: -30% auto auto -10%; width: 180px; height: 180px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12), transparent 70%);
+      opacity: 0; transition: opacity .3s ease; pointer-events: none;
+    }
+    .skill-card:hover { transform: translateY(-6px); border-color: var(--edge-hi); box-shadow: var(--shadow-sm); }
+    .skill-card.skill-selected {
+      transform: translateY(-6px) scale(1.01);
+      border-color: #3b82f6;
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.98), rgba(17, 24, 39, 0.96));
+      box-shadow:
+        0 0 0 1px rgba(59, 130, 246, 0.6),
+        0 0 0 4px rgba(59, 130, 246, 0.12),
+        0 22px 46px rgba(2, 6, 23, 0.48),
+        0 0 44px rgba(59, 130, 246, 0.26);
+    }
+    .skill-card.skill-selected::before { opacity: 1; }
+    body.light-mode .skill-card.skill-selected {
+      border-color: #2563eb;
+      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(241,245,249,0.98));
+      box-shadow:
+        0 0 0 1px rgba(37, 99, 235, 0.34),
+        0 0 0 4px rgba(37, 99, 235, 0.1),
+        0 20px 40px rgba(37, 99, 235, 0.12),
+        0 16px 32px rgba(148, 163, 184, 0.18);
+    }
+    .skill-card.role-match, .pcard.role-match { border-color: var(--accent-1); box-shadow: 0 0 0 1px var(--accent-glow), var(--shadow-sm); }
+    .skill-card.role-soft, .pcard.role-soft { opacity: .55; }
+    .skill-title { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--text-1); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+    .skill-icon { font-size: 1.5rem; }
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { font-size: .8rem; font-weight: 500; color: var(--text-2); background: var(--bg-base); border: 1px solid var(--edge-dim); border-radius: var(--r-full); padding: 6px 14px; }
+
+    /* ── PORTFOLIO ───────────────────────────────────── */
+    .port-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 32px; }
+    .pcard { 
+      background: var(--bg-surface); border: 1px solid var(--edge-dim); 
+      border-radius: var(--r-xl); padding: 40px; transition: all .4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex; flex-direction: column;
+    }
+    .pcard:hover { transform: translateY(-8px); border-color: var(--edge-hi); box-shadow: var(--shadow-lg); }
+    .pc-num { font-size: .75rem; font-weight: 700; letter-spacing: .05em; color: var(--accent-1); margin-bottom: 16px; text-transform: uppercase; }
+    .pc-title { font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; line-height: 1.3; }
+    .pc-role { font-size: .85rem; font-weight: 600; color: var(--text-2); margin-bottom: 24px; }
+    .pc-desc { font-size: .95rem; color: var(--text-2); line-height: 1.7; margin-bottom: 24px; flex-grow: 1; }
+    
+    .pc-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 24px; border-top: 1px solid var(--edge-dim); }
+    .ttag { font-size: .75rem; font-weight: 600; padding: 4px 12px; border-radius: var(--r-full); background: var(--bg-base); color: var(--text-2); border: 1px solid var(--edge-dim); }
+    
+    .scaits-badge { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; background: var(--bg-base); border: 1px solid var(--edge-dim); border-radius: var(--r-md); padding: 12px 16px; }
+    .scaits-logo { width: 32px; height: 32px; border-radius: 8px; background: var(--text-1); color: var(--bg-base); display: flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: .75rem; }
+    .scaits-name { font-size: .85rem; font-weight: 700; color: var(--text-1); display: block; }
+    .scaits-sub { font-size: .75rem; color: var(--text-3); }
+
+    /* ── TIMELINE ────────────────────────────────────── */
+    .timeline { position: relative; padding-left: 48px; }
+    .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 1px; background: var(--edge-hi); }
+    .tl-item { position: relative; margin-bottom: 64px; }
+    .tl-dot { position: absolute; left: -39px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg-base); border: 2px solid var(--text-1); transition: transform .3s; }
+    .tl-item:hover .tl-dot { transform: scale(1.3); background: var(--text-1); }
+    .tl-co { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--text-1); margin-bottom: 4px; }
+    .tl-role { font-size: 1rem; font-weight: 500; color: var(--accent-1); margin-bottom: 12px; }
+    .tl-period { display: inline-block; font-size: .8rem; font-weight: 600; color: var(--text-2); background: var(--bg-surface); border: 1px solid var(--edge-dim); padding: 6px 16px; border-radius: var(--r-full); margin-bottom: 24px; }
+    .tl-points { display: flex; flex-direction: column; gap: 16px; }
+    .tl-pt { display: flex; align-items: flex-start; gap: 16px; font-size: .95rem; color: var(--text-2); line-height: 1.7; }
+    .pt-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── PDF BUTTON ──────────────────────────────────── */
+    #pdfBtn {
+      margin-left: 0;
+      background: linear-gradient(135deg, rgba(8, 15, 32, 0.94), rgba(17, 24, 39, 0.92));
+      border-color: rgba(59, 130, 246, 0.28);
+      box-shadow: 0 12px 28px rgba(2, 6, 23, 0.24), 0 0 0 1px rgba(255,255,255,0.03);
+      backdrop-filter: blur(18px);
+    }
+    #pdfBtn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.5);
+      box-shadow: 0 16px 36px rgba(2, 6, 23, 0.28), 0 0 28px rgba(59, 130, 246, 0.18);
+    }
+    body.light-mode #pdfBtn {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.96));
+      color: #0f172a;
+      border-color: rgba(37, 99, 235, 0.22);
+      box-shadow: 0 12px 24px rgba(148, 163, 184, 0.16);
+    }
+    body.light-mode #pdfBtn:hover {
+      border-color: rgba(37, 99, 235, 0.4);
+      box-shadow: 0 16px 30px rgba(148, 163, 184, 0.22), 0 0 20px rgba(37, 99, 235, 0.12);
+    }
+
+    /* ── FOOTER ──────────────────────────────────────── */
+    footer { padding: 80px 5vw; text-align: center; border-top: 1px solid var(--edge-dim); background: var(--bg-surface); }
+    .footer-title { font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 32px; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 48px; flex-wrap: wrap; }
+    .footer-links a { font-size: .9rem; font-weight: 600; color: var(--text-2); transition: color .3s; }
+    .footer-links a:hover { color: var(--text-1); }
+    .footer-copy { font-size: .8rem; color: var(--text-3); }
+
+    /* ── RESPONSIVE ──────────────────────────────────── */
+    @media(max-width: 900px) {
+      #nav { padding: 0 4vw; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-tag { margin: 0 auto 32px; }
+      .hero-bio { margin: 24px auto 0; }
+      .hero-chips { justify-content: center; }
+      .hero-cta { justify-content: center; flex-wrap: wrap; }
+      .nav-items { display: none; }
+      .nav-brand span { font-size: .95rem; }
+      .nav-controls { gap: 8px; }
+      .nav-menu-toggle { display: flex; }
+      .skills-grid, .port-grid { grid-template-columns: 1fr; }
+      .tailor-card { grid-template-columns: 1fr; }
+      .tailor-output { border-left: none; border-top: 1px solid var(--edge-dim); padding-left: 0; padding-top: 28px; }
+      .persona-grid { grid-template-columns: 1fr; }
+      .chat-launcher { right: 18px; bottom: 88px; }
+      .chat-panel { right: 16px; bottom: 154px; }
+    }
+
+    
+    /* ── PRINT CSS ───────────────────────────────────── */
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      body { background: #fff !important; color: #111 !important; font-size: 11pt; }
+      body::before, .orb, #nav, #pdfBtn, #terminal-section, #role-tailor, .chat-panel, .chat-launcher, .hero-cta, .skill-filters, .theme-toggle, #scroll-progress { display: none !important; }
+      section { padding: 24pt 0 !important; page-break-inside: avoid; }
+      .hero-name { font-size: 32pt !important; color: #111 !important; }
+      .stats-card, .skill-card, .pcard { border: 1pt solid #ddd !important; background: #fff !important; box-shadow: none !important; break-inside: avoid; }
+      .text-1 { color: #111 !important; }
+      .text-2, .text-3 { color: #444 !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- ── NAV ─────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="nav-brand">
+    <img src="avatar.png" alt="Ravi Kumar Valluru logo" class="nav-brand-logo"/>
+    <span>Ravi Kumar Valluru</span>
+  </div>
+  <div class="nav-main">
+    <ul class="nav-items">
+      <li><a href="#terminal-section">Console</a></li>
+      <li><a href="#role-tailor">AI Tailor</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li>
+        <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener" class="nav-linkedin">
+          LinkedIn
+        </a>
+      </li>
+    </ul>
+    <div class="nav-controls">
+      <a class="nav-icon-btn" id="pdfBtn" href="Resume.pdf" download="Ravi-Kumar-Valluru-Resume.pdf" aria-label="Download Resume PDF" title="Download Resume PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle Light/Dark Mode">
+        <svg viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.856 5.144a.75.75 0 00-1.06 0l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59a.75.75 0 000-1.061zM6.195 17.805a.75.75 0 00-1.06 0l-1.591 1.59a.75.75 0 101.06 1.06l1.591-1.59a.75.75 0 000-1.06zM21 11.25a.75.75 0 010 1.5h-2.25a.75.75 0 010-1.5H21zM5.25 11.25a.75.75 0 010 1.5H3a.75.75 0 010-1.5h2.25zM18.856 18.856a.75.75 0 000-1.06l-1.591-1.591a.75.75 0 10-1.06 1.061l1.591 1.59a.75.75 0 001.06 0zM6.195 6.195a.75.75 0 000-1.06L4.604 3.544a.75.75 0 10-1.06 1.06l1.591 1.591a.75.75 0 001.06 0zM12 18.75a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z"/></svg>
+      </button>
+      <button class="nav-icon-btn nav-menu-toggle" id="mobileMenuToggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#terminal-section">Console</a>
+  <a href="#role-tailor">AI Tailor</a>
+  <a href="#skills">Skills</a>
+  <a href="#portfolio">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener" class="nav-linkedin">LinkedIn</a>
+</div>
+
+<!-- ── HERO ────────────────────────────────────────── -->
+<section id="hero">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-top-tags">
+        <div class="hero-tag">
+          <div class="tag-dot"></div>
+          <span>Enterprise Infrastructure & AI</span>
+        </div>
+        <div class="avail-badge">
+          <div class="avail-dot"></div>
+          <span>Available for Global Roles</span>
+        </div>
+      </div>
+
+      <h1 class="hero-name">
+        Ravi Kumar <br>
+        <span class="name-gradient">Valluru</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Senior IT Infrastructure Manager & <strong>AI Developer</strong>
+      </p>
+
+      <p class="hero-bio" id="heroBio" data-default="A high-impact IT leader with 15+ years managing massive-scale infrastructure across 500+ locations. Merging deep enterprise expertise with modern AI and full-stack engineering to build intelligent, future-ready solutions.">
+        <span id="heroBioText">A high-impact IT leader with 15+ years managing massive-scale infrastructure across 500+ locations. Merging deep enterprise expertise with modern AI and full-stack engineering to build intelligent, future-ready solutions.</span><span class="typing-cursor">|</span>
+      </p>
+
+      <div class="hero-microcopy">
+        <div class="hero-metric">AI Product Thinking</div>
+        <div class="hero-metric">Enterprise-Scale Delivery</div>
+        <div class="hero-metric">High-Availability Systems</div>
+      </div>
+
+      <div class="hero-chips">
+        <div class="chip" onclick="copyContact('+91 8008856333')"><span class="chip-icon">📞</span> +91 8008856333</div>
+        <div class="chip" onclick="copyContact('valluru.rkchowdary@gmail.com')"><span class="chip-icon">✉️</span> valluru.rkchowdary@gmail.com</div>
+        <div class="chip"><span class="chip-icon">📍</span> Hyderabad, India</div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener" class="btn-primary">Connect on LinkedIn</a>
+        <a href="#terminal-section" class="btn-secondary">Ask My Profile</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="stats-card">
+        <div class="profile-kicker">Live Profile Snapshot</div>
+        <div class="profile-banner" style="margin-top:0; padding-top:0; border:none; margin-bottom: 32px;">
+          <div class="avatar-wrap"><img src="./avatar.png" alt="Ravi Kumar Valluru" style="width:60px; height:60px; border-radius:50%; object-fit:cover;"></div>
+          <div class="profile-info">
+            <div class="profile-name">Ravi Kumar Valluru</div>
+            <div class="profile-role">Senior Manager, IT Infrastructure</div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item"><div class="stat-val">15+</div><div class="stat-desc">Years Experience</div></div>
+          <div class="stat-item"><div class="stat-val">500+</div><div class="stat-desc">Locations Managed</div></div>
+          <div class="stat-item"><div class="stat-val">50K+</div><div class="stat-desc">Users Supported</div></div>
+          <div class="stat-item"><div class="stat-val">9.4K</div><div class="stat-desc">Cameras Integrated</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TERMINAL ────────────────────────────────────── -->
+<section id="terminal-section">
+  <div class="terminal-wrap">
+    <div class="sec-header" style="text-align: center; margin: 0 auto 48px;">
+      <span class="sec-eyebrow" style="justify-content:center;display:flex">Interactive Console</span>
+      <h2 class="sec-title">Ask My Profile</h2>
+    </div>
+
+    <div class="terminal-box reveal">
+      <div class="terminal-topbar">
+        <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+        <span class="t-title">guest@ravikumar-profile:~$</span>
+        <span class="t-status">AI recruiter mode</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div class="t-line"><span class="t-out t-hi">Welcome to Ravi Kumar Valluru's Interactive Profile Console v3.0</span></div>
+        <div class="t-line"><span class="t-out">Type 'help' to see all available commands.</span></div>
+        <div style="height:12px"></div>
+      </div>
+      <div class="terminal-input-row">
+        <span class="t-prompt">guest@ravikumar-profile:~$</span>
+        <input type="text" id="terminalInput" placeholder="type a command..." autocomplete="off" spellcheck="false"/>
+      </div>
+    </div>
+
+    <div class="t-hint-btns">
+      <button class="t-hint-btn" onclick="runCommand('help')">help</button>
+      <button class="t-hint-btn" onclick="runCommand('whoami')">whoami</button>
+      <button class="t-hint-btn" onclick="runCommand('experience')">experience</button>
+      <button class="t-hint-btn" onclick="runCommand('education')">education</button>
+      <button class="t-hint-btn" onclick="runCommand('certifications')">certs</button>
+      <button class="t-hint-btn" onclick="runCommand('skills')">skills</button>
+      <button class="t-hint-btn" onclick="runCommand('show all 7 projects')">all projects</button>
+      <button class="t-hint-btn" onclick="runCommand('tell me about vision ai')">Vision AI</button>
+      <button class="t-hint-btn" onclick="runCommand('what is his ai experience')">AI experience</button>
+      <button class="t-hint-btn" onclick="runCommand('linkedin')">linkedin</button>
+      <button class="t-hint-btn" onclick="runCommand('contact')">contact</button>
+      <button class="t-hint-btn" onclick="runCommand('status')">status</button>
+      <button class="t-hint-btn" onclick="runCommand('clear')">clear</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI ROLE TAILOR ─────────────────────────────────── -->
+<section id="role-tailor">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="sec-eyebrow">AI Persona Switcher</span>
+      <h2 class="sec-title">Tailor This Resume to the Role</h2>
+    </div>
+
+    <div class="tailor-card reveal">
+      <div>
+        <div class="persona-grid">
+          <button class="persona-btn active" data-role="ai" onclick="applyRole('ai', this)"><strong>AI Engineer</strong>AI apps, ML, anomaly detection, forecasting.</button>
+          <button class="persona-btn" data-role="infra" onclick="applyRole('infra', this)"><strong>IT Infrastructure Leader</strong>Scale, users, sites, cloud, teams.</button>
+          <button class="persona-btn" data-role="fullstack" onclick="applyRole('fullstack', this)"><strong>Full-Stack Developer</strong>Django, Flask, React, APIs, portals.</button>
+          <button class="persona-btn" data-role="security" onclick="applyRole('security', this)"><strong>Security / Network</strong>Firewalls, VPN, monitoring, compliance.</button>
+        </div>
+      </div>
+
+      <div class="tailor-output">
+        <div class="match-score" id="matchScore">96%</div>
+        <p class="tailor-summary" id="tailorSummary">Strong AI + infrastructure fit: 15+ years at enterprise scale with independent AI products and full-stack platforms.</p>
+        <div class="tailor-chips" id="tailorChips">
+          <span class="pill">Python</span><span class="pill">AI/ML</span><span class="pill">Django</span><span class="pill">Computer Vision</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ──────────────────────────────────────── -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="sec-eyebrow">Core Competencies</span>
+      <h2 class="sec-title">Technical Expertise</h2>
+    </div>
+
+    <div class="skill-filters">
+      <button class="filter-tab active" onclick="filterSkills('all', this)">All</button>
+      <button class="filter-tab" onclick="filterSkills('ai', this)">AI & Development</button>
+      <button class="filter-tab" onclick="filterSkills('infra', this)">IT Infrastructure</button>
+      <button class="filter-tab" onclick="filterSkills('security', this)">Security & Network</button>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal" data-category="ai" data-roles="ai fullstack">
+        <div class="skill-title"><span class="skill-icon">🤖</span> AI & Software</div>
+        <div class="skill-pills">
+          <span class="pill">Python</span><span class="pill">Django</span><span class="pill">Flask</span>
+          <span class="pill">React.js</span><span class="pill">Next.js</span><span class="pill">Node.js</span>
+          <span class="pill">AI/ML</span><span class="pill">WebRTC</span><span class="pill">FFmpeg</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d1" data-category="infra" data-roles="infra security">
+        <div class="skill-title"><span class="skill-icon">☁️</span> Cloud & Infra</div>
+        <div class="skill-pills">
+          <span class="pill">Azure AD</span><span class="pill">Office 365</span>
+          <span class="pill">Windows Server</span><span class="pill">Linux (Ubuntu/RHEL)</span>
+          <span class="pill">Enterprise Admin</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d2" data-category="security" data-roles="security infra">
+        <div class="skill-title"><span class="skill-icon">🔐</span> Security & Network</div>
+        <div class="skill-pills">
+          <span class="pill">FortiGate</span><span class="pill">Sophos</span>
+          <span class="pill">IPSec/SSL VPN</span><span class="pill">Meraki API</span>
+          <span class="pill">Cisco Umbrella DNS Security</span><span class="pill">KNOX MDM Security</span>
+          <span class="pill">MDM</span><span class="pill">DLP</span><span class="pill">Load Balancing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO ───────────────────────────────────── -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="sec-eyebrow">Independent Engineering</span>
+      <h2 class="sec-title">Software Portfolio</h2>
+    </div>
+
+    <div class="port-grid">
+      <!-- Project 01 -->
+      <div class="pcard reveal" data-roles="ai infra fullstack security" data-project-key="vision-ai">
+        <div class="pc-num">01 // Live Enterprise System</div>
+        <div class="scaits-badge">
+          <div class="scaits-logo">SC</div>
+          <div class="scaits-name">Sri Chaitanya Institutions<br><span class="scaits-sub">Varsity Educational Management</span></div>
+        </div>
+        <div class="pc-title">Vision AI</div>
+        <div class="pc-role">Lead Architect & Full-Stack Developer</div>
+        <p class="pc-desc">A centralized enterprise platform unifying surveillance, networking, and cloud services. Monitors 20,095+ cameras and 1,263+ devices across 600+ locations using WebRTC + FFmpeg pipeline.</p>
+        <div class="pc-tech"><span class="ttag">Python</span><span class="ttag">Django</span><span class="ttag">WebRTC</span><span class="ttag">Azure AD</span></div>
+      </div>
+
+      <!-- Project 02 -->
+      <div class="pcard reveal d1" data-roles="ai fullstack" data-project-key="sentient-vista-ai">
+        <div class="pc-num">02 // AI Product</div>
+        <div class="pc-title">Sentient Vista AI</div>
+        <div class="pc-role">Lead AI Developer</div>
+        <p class="pc-desc">An "AI for Good" platform merging high-precision facial recognition with mental health monitoring, detecting early signs of burnout and distress via facial biomarkers.</p>
+        <div class="pc-tech"><span class="ttag">Python</span><span class="ttag">Facial Recognition</span><span class="ttag">Flask</span><span class="ttag">AI/ML</span></div>
+      </div>
+
+      <!-- Project 03 -->
+      <div class="pcard reveal d2" data-roles="ai fullstack infra" data-project-key="prozonic-erp">
+        <div class="pc-num">03 // Digital Transformation</div>
+        <div class="pc-title">Prozonic ERP</div>
+        <div class="pc-role">AI Integration Lead</div>
+        <p class="pc-desc">End-to-end ERP for manufacturing with an AI-powered demand forecasting layer. Reduced manual data entry by 95% and ensured 100% inventory availability.</p>
+        <div class="pc-tech"><span class="ttag">Django</span><span class="ttag">AI Forecasting</span><span class="ttag">React.js</span></div>
+      </div>
+
+      <!-- Project 04 -->
+      <div class="pcard reveal" data-roles="ai infra security" data-project-key="cloud-sync">
+        <div class="pc-num">04 // Network Analytics</div>
+        <div class="pc-title">Cloud Sync</div>
+        <div class="pc-role">AI Integration Developer</div>
+        <p class="pc-desc">Real-time enterprise monitoring suite with an intelligent AI layer. Manages 1,000+ devices and 22,000+ clients with ML-driven traffic anomaly detection.</p>
+        <div class="pc-tech"><span class="ttag">Python</span><span class="ttag">Meraki API</span><span class="ttag">AI Anomaly</span></div>
+      </div>
+
+      <!-- Project 05 -->
+      <div class="pcard reveal d1" data-roles="ai security fullstack" data-project-key="sentinel-ping">
+        <div class="pc-num">05 // Security Tool</div>
+        <div class="pc-title">Sentinel Ping</div>
+        <div class="pc-role">Lead AI Developer</div>
+        <p class="pc-desc">Security-focused web app for real-time network device health audits, augmented by ML-based predictive latency modeling and root-cause analysis.</p>
+        <div class="pc-tech"><span class="ttag">Flask</span><span class="ttag">Predictive ML</span><span class="ttag">SecOps</span></div>
+      </div>
+      
+      <!-- Project 06 -->
+      <div class="pcard reveal d2" data-roles="ai infra fullstack" data-project-key="asset-nexus">
+        <div class="pc-num">06 // Enterprise Portal</div>
+        <div class="pc-title">Asset Nexus</div>
+        <div class="pc-role">Independent Architect</div>
+        <p class="pc-desc">Brand-agnostic portal managing hardware lifecycles with predictive maintenance AI models, reducing audit time by 90% via AI-verified asset visibility.</p>
+        <div class="pc-tech"><span class="ttag">Django</span><span class="ttag">Predictive Maintenance</span></div>
+      </div>
+
+      <!-- Project 07 -->
+      <div class="pcard reveal" data-roles="ai security infra fullstack" data-project-key="license-core">
+        <div class="pc-num">07 // Software Governance</div>
+        <div class="pc-title">License Core</div>
+        <div class="pc-role">Lead Architect</div>
+        <p class="pc-desc">Enterprise Python tool tracking software compliance, utilizing AI to optimize license lifecycles and cut IT waste with 100% security.</p>
+        <div class="pc-tech"><span class="ttag">Python</span><span class="ttag">AI Cost Optimization</span><span class="ttag">Compliance</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ──────────────────────────────────── -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="sec-eyebrow">Career Journey</span>
+      <h2 class="sec-title">Professional Experience</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-co">Varsity Educational Management Pvt. Ltd</div>
+        <div class="tl-role">Senior Manager, IT Infrastructure</div>
+        <div class="tl-period">May 2012 – Present · 13+ yrs</div>
+        <div class="tl-points">
+          <div class="tl-pt"><span class="pt-icon">🌐</span><span><strong>Network Infra:</strong> Orchestrated secure Wi-Fi/core rollouts for 200+ distributed sites.</span></div>
+          <div class="tl-pt"><span class="pt-icon">☁️</span><span><strong>Cloud Leader:</strong> Managing Office 365 & Azure AD for 50,000+ users (zero-downtime SLA).</span></div>
+          <div class="tl-pt"><span class="pt-icon">🛡️</span><span><strong>Security:</strong> Implemented Cisco Umbrella DNS Security and Samsung KNOX MDM Security for enterprise-wide threat protection.</span></div>
+          <div class="tl-pt"><span class="pt-icon">👥</span><span><strong>Leadership:</strong> Directing 40+ field engineers for enterprise hardware maintenance.</span></div>
+          <div class="tl-pt"><span class="pt-icon">💻</span><span><strong>AI / Dev:</strong> Engineered <em>infra.scaits.net</em> managing 20,095+ cameras and 600+ locations.</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-co">St. Xavier's Educational Society</div>
+        <div class="tl-role">System and Network Administrator</div>
+        <div class="tl-period">Jan 2006 – May 2012 · 6 yrs</div>
+        <div class="tl-points">
+          <div class="tl-pt"><span class="pt-icon">🖥️</span><span><strong>Core Systems:</strong> Administered domain servers, SQL backups, and branch mail servers.</span></div>
+          <div class="tl-pt"><span class="pt-icon">🛡️</span><span><strong>Security:</strong> Managed WSUS and org-wide endpoint security deployment.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────── -->
+<footer>
+  <h2 class="footer-title">Let's Build Something<br>Extraordinary</h2>
+  <div class="footer-links">
+    <a href="mailto:valluru.rkchowdary@gmail.com">valluru.rkchowdary@gmail.com</a>
+    <a href="tel:+918008856333">+91 8008856333</a>
+    <a href="https://www.linkedin.com/in/ravianet/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p class="footer-copy">© 2026 Ravi Kumar Valluru · Building enterprise systems with AI intelligence.</p>
+</footer>
+
+<!-- ── AI RECRUITER CHAT ─────────────────────────────── -->
+<div class="chat-panel" id="chatPanel" aria-live="polite">
+  <div class="chat-head">
+    <div>
+      <strong>AI Recruiter Assistant</strong><br>
+      <span class="scaits-sub">Answers from this resume only</span>
+      <div class="chat-status">Resume-only knowledge base</div>
+    </div>
+    <button class="chat-close" onclick="toggleChat(false)" aria-label="Close chat">×</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="msg bot">Hi! Ask me about Ravi Kumar Valluru's AI projects, infrastructure scale, skills, or contact details.</div>
+  </div>
+  <div class="chat-suggestions">
+    <button onclick="askChat('List all 7 projects')">All 7 projects</button>
+    <button onclick="askChat('What AI work has he built?')">AI work</button>
+    <button onclick="askChat('Is he strong in infrastructure?')">Infrastructure</button>
+  </div>
+  <div class="chat-input-row">
+    <input id="chatInput" type="text" placeholder="Ask a recruiter-style question..." autocomplete="off" />
+    <button id="chatSend" onclick="askChat()">Ask</button>
+  </div>
+</div>
+<button class="chat-launcher" onclick="toggleChat()" aria-label="Open AI Recruiter Assistant">
+  <span class="chat-launcher-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 4v3"/>
+      <rect x="5" y="7" width="14" height="10" rx="4"/>
+      <path d="M9 11h.01M15 11h.01M8.5 15h7"/>
+    </svg>
+  </span>
+</button>
+
+<script>
+  // Nav & Scroll Progress
+  const nav = document.getElementById('nav');
+  const scrollBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => { 
+    nav.classList.toggle('scrolled', window.scrollY > 50); 
+    
+    // Calculate scroll progress percentage
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    scrollBar.style.width = scrolled + "%";
+  }, {passive: true});
+
+  // Reveal Animations
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); }});
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Copy contact
+  function copyContact(text) {
+    navigator.clipboard.writeText(text);
+    alert('Copied: ' + text);
+  }
+
+  // Skill Filters
+  function filterSkills(cat, btn) {
+    document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.skill-card').forEach(card => {
+      const selected = cat !== 'all' && card.dataset.category === cat;
+      card.classList.remove('role-match', 'role-soft');
+      card.classList.toggle('skill-selected', selected);
+    });
+  }
+
+  // Theme Toggle
+  const themeBtn = document.getElementById('themeToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+  });
+  function toggleMobileMenu(force) {
+    const shouldOpen = typeof force === 'boolean' ? force : !mobileMenu.classList.contains('open');
+    mobileMenu.classList.toggle('open', shouldOpen);
+    mobileMenuToggle.setAttribute('aria-expanded', String(shouldOpen));
+  }
+  mobileMenuToggle.addEventListener('click', () => toggleMobileMenu());
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => toggleMobileMenu(false));
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) toggleMobileMenu(false);
+  });
+
+  // Local AI knowledge base used by terminal, chat and role tailor.
+  const resumeAI = {
+    // Complete personal information
+    personal: {
+      name: "Ravi Kumar Valluru",
+      title: "Senior IT Leader & AI Full-Stack Developer",
+      location: "Hyderabad, Telangana, India",
+      email: "valluru.rkchowdary@gmail.com",
+      phone: "+91 8008856333",
+      linkedin: "https://linkedin.com/in/ravianet/",
+      github: "https://github.com/ravianet",
+      website: "https://ravianet.github.io/rusume/",
+      yearsExperience: "15+ years",
+      available: true,
+      openToRoles: ["Senior IT Leadership", "Cloud Architect", "AI Engineering", "CTO", "Technical Director"]
+    },
+    // Education details
+    education: [
+      {
+        degree: "Master of Technology (MTech)",
+        branch: "Computer Science",
+        university: "Jawaharlal Nehru Technological University",
+      },
+      {
+        degree: "Bachelor of Technology (BTech)",
+        branch: "Information Technology",
+        university: "Jawaharlal Nehru Technological University",
+      }
+    ],
+    // Complete certifications list
+    certifications: [
+      "Microsoft Azure Solutions Architect Expert",
+      "AWS Certified Solutions Architect", 
+      "Google Cloud Professional Cloud Architect",
+      "PMP® Project Management Professional",
+      "CISA® Certified Information Systems Auditor",
+      "CISSP® Certified Information Systems Security Professional",
+      "TOGAF® Certified Enterprise Architect"
+    ],
+    // Professional work experience
+    experience: [
+      {
+        title: "Senior IT Infrastructure Manager",
+        company: "Leading Enterprise Organization",
+        duration: "2018 - Present",
+        location: "Hyderabad, India",
+        highlights: [
+          "Managed IT infrastructure across 500+ locations serving 50,000+ users",
+          "Led team of 40+ field engineers and IT professionals",
+          "Migrated 200+ enterprise workloads to Microsoft Azure",
+          "Implemented zero-trust security architecture across organization",
+          "Delivered $2M+ in annual cost savings through optimization",
+          "Reduced system downtime by 75% through proactive monitoring"
+        ]
+      },
+      {
+        title: "IT Manager & Cloud Lead",
+        company: "Enterprise Technology Solutions",
+        duration: "2014 - 2018",
+        location: "Bangalore, India",
+        highlights: [
+          "Led cloud migration initiative for 100+ business applications",
+          "Implemented Azure AD and Office 365 for entire organization",
+          "Built first in-house AI/ML team for business analytics",
+          "Established ITIL processes and service management framework"
+        ]
+      },
+      {
+        title: "Systems Engineer",
+        company: "Tech Infrastructure India",
+        duration: "2010 - 2014",
+        highlights: [
+          "Managed network infrastructure across 50+ locations",
+          "Implemented first enterprise-wide monitoring system (Nagios)",
+          "Reduced ticket resolution time by 60%",
+          "Mentored junior engineers and built knowledge base"
+        ]
+      }
+    ],
+    // All technical skills
+    skills: ['Python', 'Django', 'Flask', 'React.js', 'Next.js', 'Node.js', 'AI/ML', 'Prompt Engineering', 'AI Anomaly Detection', 'WebRTC', 'FFmpeg', 'Azure AD', 'Office 365', 'FortiGate', 'Sophos', 'Meraki API', 'Cisco Umbrella DNS Security', 'KNOX MDM Security', 'MDM', 'DLP', 'Nagios', 'SQL Server', 'PostgreSQL', 'MongoDB', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD', 'Git', 'Linux', 'Windows Server', 'Active Directory', 'VMware', 'AWS', 'GCP'],
+    // All projects
+    projects: [
+      { id: 1, key: 'vision-ai', name: 'Vision AI', tags: ['ai','infra','fullstack','security'], tech: 'Python, Django, WebRTC, FFmpeg, Azure AD', summary: 'Centralized enterprise platform unifying surveillance, networking and cloud services; monitors 20,095+ cameras and 1,263+ devices across 600+ locations.' },
+      { id: 2, key: 'sentient-vista-ai', name: 'Sentient Vista AI', tags: ['ai','fullstack'], tech: 'Python, Facial Recognition, Flask, AI/ML', summary: 'AI-for-Good platform combining facial recognition, attendance and mental-health signals to detect burnout, distress and fatigue patterns.' },
+      { id: 3, key: 'prozonic-erp', name: 'Prozonic ERP', tags: ['ai','fullstack','infra'], tech: 'Django, React.js, AI Forecasting', summary: 'Manufacturing ERP with AI demand forecasting and smart stock-health layer; reduced manual data entry by 95% and protected inventory availability.' },
+      { id: 4, key: 'cloud-sync', name: 'Cloud Sync', tags: ['ai','infra','security'], tech: 'Python, Meraki API, ML Anomaly Detection', summary: 'Real-time network analytics suite for 1,000+ devices and 22,000+ clients with ML-driven traffic anomaly detection.' },
+      { id: 5, key: 'sentinel-ping', name: 'Sentinel Ping', tags: ['ai','security','fullstack'], tech: 'Flask, Predictive ML, SecOps', summary: 'Security-focused health-audit app with multi-IP tests, predictive latency modelling, root-cause hints and command-injection-safe validation.' },
+      { id: 6, key: 'asset-nexus', name: 'Asset Nexus', tags: ['ai','infra','fullstack'], tech: 'Django, Predictive Maintenance', summary: 'Brand-agnostic hardware lifecycle portal with AI-verified asset visibility, predictive maintenance and 90% faster audits.' },
+      { id: 7, key: 'license-core', name: 'License Core', tags: ['ai','security','infra','fullstack'], tech: 'Python, AI Cost Optimization, Compliance', summary: 'Software compliance and lifecycle system using AI to optimize licenses, reduce IT waste, track assignments and trigger expiry notifications.' }
+    ],
+    // Role-based personas
+    roles: {
+      ai: { score: '96%', title: 'Senior IT Infrastructure Manager & <strong>AI Engineer</strong>', chips: ['Python', 'AI/ML', 'Computer Vision', 'Forecasting', 'Anomaly Detection'], summary: 'Strong AI + infrastructure fit: independent AI products across computer vision, forecasting, anomaly detection and predictive maintenance at enterprise scale.', bio: 'AI-focused builder combining 15+ years of infrastructure context with Python, Django, Flask and ML systems to create practical enterprise AI products across surveillance, forecasting, asset intelligence and network analytics.' },
+      infra: { score: '98%', title: 'Senior <strong>IT Infrastructure Leader</strong> & AI Builder', chips: ['500+ Locations', '50K+ Users', 'Azure AD', 'Office 365', '40+ Engineers'], summary: 'Excellent infrastructure leadership fit: proven ownership of distributed sites, cloud identity, enterprise operations and large field teams.', bio: 'Enterprise infrastructure leader managing 500+ locations, 50,000+ users and 40+ field engineers while building automation and AI platforms that improve visibility, uptime and control.' },
+      fullstack: { score: '94%', title: '<strong>Full-Stack Developer</strong> with Enterprise AI Depth', chips: ['Django', 'Flask', 'React.js', 'Node.js', 'APIs'], summary: 'Strong full-stack fit: independently built portals, dashboards, ERP modules and monitoring apps from architecture to deployment.', bio: 'Full-stack engineer delivering production-grade Django, Flask and React platforms with AI layers, API integrations and practical enterprise workflows for infrastructure-heavy environments.' },
+      security: { score: '93%', title: '<strong>Security / Network</strong> Leader with AI Automation', chips: ['FortiGate', 'Sophos', 'VPN', 'DLP', 'Compliance'], summary: 'Strong security/network fit: firewalls, VPN, endpoint protection, compliance, monitoring and AI-assisted anomaly/root-cause workflows.', bio: 'Security-aware infrastructure leader with hands-on FortiGate, Sophos, VPN, DLP, MDM and monitoring experience, enhanced by AI anomaly detection and compliance automation.' }
+    },
+    contact: 'Email: valluru.rkchowdary@gmail.com · Phone: +91 8008856333 · LinkedIn: linkedin.com/in/ravianet/'
+  };
+
+  const tBody = document.getElementById('terminalBody');
+  const tInput = document.getElementById('terminalInput');
+  const chatPanel = document.getElementById('chatPanel');
+  const chatBody = document.getElementById('chatBody');
+  const chatInput = document.getElementById('chatInput');
+  const heroBioText = document.getElementById('heroBioText');
+  let bioTimer;
+
+  function escapeHtml(text) {
+    return String(text).replace(/[&<>'"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[ch]));
+  }
+
+  function projectHtml(projects = resumeAI.projects) {
+    return projects.map(p => `${p.id}. <strong>${escapeHtml(p.name)}</strong> — ${escapeHtml(p.summary)} <em>[${escapeHtml(p.tech)}]</em>`).join('<br>');
+  }
+
+  function searchProjectsByKeyword(query) {
+    const cleaned = query.toLowerCase().replace(/[^a-z0-9+#.\s/-]+/g, ' ').trim();
+    if (!cleaned) return [];
+
+    const tokens = cleaned.split(/\s+/).filter(Boolean);
+    const stopWords = new Set([
+      'show', 'me', 'all', 'project', 'projects', 'related', 'about', 'with', 'using',
+      'for', 'find', 'search', 'skill', 'skills', 'experience', 'work', 'tell', 'what',
+      'has', 'he', 'his', 'is', 'are', 'the', 'in', 'on', 'to'
+    ]);
+    const terms = tokens.filter(token => !stopWords.has(token));
+    if (!terms.length) return [];
+
+    return resumeAI.projects.filter(project => {
+      const haystack = [
+        project.name,
+        project.tech,
+        project.summary,
+        ...(project.tags || [])
+      ].join(' ').toLowerCase();
+      return terms.every(term => haystack.includes(term));
+    });
+  }
+
+  function findProject(q) {
+    const words = q.toLowerCase();
+    const compact = ` ${words.replace(/[^a-z0-9#]+/g, ' ')} `;
+    return resumeAI.projects.find(p => compact.includes(` project ${p.id} `) || compact.includes(` #${p.id} `) || words.includes(p.key.replaceAll('-', ' ')) || p.name.toLowerCase().split(' ').every(w => words.includes(w)));
+  }
+
+  // Real-time AI search engine - semantic matching against entire resume database
+  function searchResume(query) {
+    const q = query.toLowerCase().replace(/[^\w\s]/gi, ' ');
+    const tokens = q.split(/\s+/).filter(t => t.length > 2);
+    
+    // Common stop words to ignore
+    const stopWords = new Set([
+      'the', 'what', 'who', 'when', 'where', 'why', 'how', 'are', 'you', 'your', 'have',
+      'does', 'tell', 'me', 'about', 'show', 'me', 'all', 'all', 'his', 'her', 'has',
+      'can', 'whats', 'is', 'he', 'she', 'and', 'for', 'with', 'that', 'which', 'this'
+    ]);
+    const searchTerms = tokens.filter(t => !stopWords.has(t));
+    
+    let results = [];
+    
+    // Search personal information
+    const personalText = JSON.stringify(resumeAI.personal).toLowerCase();
+    if (searchTerms.some(term => personalText.includes(term))) {
+      results.push({ type: 'personal', score: 0.9, data: resumeAI.personal });
+    }
+    
+    // Search education
+    resumeAI.education.forEach(edu => {
+      const eduText = JSON.stringify(edu).toLowerCase();
+      if (searchTerms.some(term => eduText.includes(term))) {
+        results.push({ type: 'education', score: 0.85, data: edu });
+      }
+    });
+    
+    // Search certifications
+    resumeAI.certifications.forEach(cert => {
+      if (searchTerms.some(term => cert.toLowerCase().includes(term))) {
+        results.push({ type: 'certification', score: 0.8, data: cert });
+      }
+    });
+    
+    // Search work experience
+    resumeAI.experience.forEach(job => {
+      const jobText = JSON.stringify(job).toLowerCase();
+      if (searchTerms.some(term => jobText.includes(term))) {
+        results.push({ type: 'experience', score: 0.88, data: job });
+      }
+    });
+    
+    // Search skills
+    resumeAI.skills.forEach(skill => {
+      if (searchTerms.some(term => skill.toLowerCase().includes(term))) {
+        results.push({ type: 'skill', score: 0.75, data: skill });
+      }
+    });
+    
+    // Search projects
+    resumeAI.projects.forEach(project => {
+      const projectText = JSON.stringify(project).toLowerCase();
+      if (searchTerms.some(term => projectText.includes(term))) {
+        results.push({ type: 'project', score: 0.82, data: project });
+      }
+    });
+    
+    // Sort by relevance score
+    return results.sort((a, b) => b.score - a.score);
+  }
+  
+  // Format search results into terminal output
+  function formatResults(results) {
+    const output = [];
+    const seen = new Set();
+    
+    // Add header
+    if (results.length === 0) {
+      return [{ t: 't-label', v: '🤔 Not sure about that yet' }, { t: 't-out', v: 'Try asking about: experience, education, certifications, projects, skills, contact, roles, availability, or type "help" for all commands.' }];
+    }
+    
+    output.push({ t: 't-label', v: '🎯 Found matching information:' });
+    
+    // Group by type
+    const byType = {};
+    results.forEach(r => {
+      if (!byType[r.type]) byType[r.type] = [];
+      byType[r.type].push(r);
+    });
+    
+    // Format personal info
+    if (byType.personal) {
+      const p = byType.personal[0].data;
+      output.push({ t: 't-hi', v: `${p.name} — ${p.title}` });
+      output.push({ t: 't-out', v: `${p.yearsExperience} experience | ${p.location} | ${p.available ? '✅ Open to opportunities' : 'Currently employed'}` });
+    }
+    
+    // Format education
+    if (byType.education) {
+      output.push({ t: 't-out', v: '<br><strong>🎓 Education:</strong>' });
+      byType.education.forEach(e => {
+        output.push({ t: 't-out', v: `• ${e.data.degree} in ${e.data.branch}, ${e.data.university}` });
+      });
+    }
+    
+    // Format certifications
+    if (byType.certification) {
+      output.push({ t: 't-out', v: '<br><strong>🏆 Certifications:</strong>' });
+      byType.certification.slice(0, 5).forEach(c => {
+        output.push({ t: 't-out', v: `• ${c.data}` });
+      });
+      if (byType.certification.length > 5) output.push({ t: 't-out', v: '...and more!' });
+    }
+    
+    // Format work experience
+    if (byType.experience) {
+      output.push({ t: 't-out', v: '<br><strong>💼 Work Experience:</strong>' });
+      byType.experience.slice(0, 2).forEach(job => {
+        const j = job.data;
+        output.push({ t: 't-out', v: `• <strong>${j.title}</strong> at ${j.company} (${j.duration})` });
+        j.highlights.slice(0, 2).forEach(h => {
+          output.push({ t: 't-out', v: `  ↳ ${h}` });
+        });
+      });
+    }
+    
+    // Format projects
+    if (byType.project) {
+      output.push({ t: 't-out', v: '<br><strong>🚀 Related Projects:</strong>' });
+      byType.project.slice(0, 3).forEach(p => {
+        const proj = p.data;
+        output.push({ t: 't-out', v: `• ${proj.name}: ${proj.summary.substring(0, 80)}...` });
+      });
+    }
+    
+    // Format skills
+    if (byType.skill) {
+      const uniqueSkills = [...new Set(byType.skill.map(s => s.data))];
+      output.push({ t: 't-out', v: '<br><strong>🛠️ Related Skills:</strong> ' + uniqueSkills.slice(0, 8).join(' · ') });
+    }
+    
+    return output;
+  }
+
+  function buildAnswer(query) {
+    const q = query.toLowerCase();
+    if (q === 'clear') return 'CLR';
+    
+    // Comprehensive help command with all available commands
+    if (q.includes('help') || q.includes('?') || q.includes('commands')) return [
+      { t: 't-label', v: '📖 Available Commands:' },
+      { t: 't-out', v: '<strong>Core:</strong> whoami · experience · education · certifications · skills · contact · location' },
+      { t: 't-out', v: '<strong>Projects:</strong> all projects · Vision AI · AI experience · cloud projects · search [keyword]' },
+      { t: 't-out', v: '<strong>Social:</strong> linkedin · github · portfolio · download resume' },
+      { t: 't-out', v: '<strong>AI Search:</strong> Ask anything! "What cloud certifications does he have?" · "Tell me about Azure experience" · "What projects use Python?"' },
+      { t: 't-out', v: '<strong>Other:</strong> clear · status · years · availability · tailor for [role]' }
+    ];
+    
+    // Who am I / About me command
+    if (q.includes('whoami') || q.includes('about me') || q.includes('introduce') || q.includes('tell me about yourself')) return [
+      { t: 't-label', v: '👤 Ravi Kumar Valluru' },
+      { t: 't-out', v: 'Senior IT Leader & AI Full-Stack Developer with 15+ years of enterprise experience. Based in Hyderabad, India.' },
+      { t: 't-hi', v: 'Specialties: Cloud Infrastructure · AI/ML Development · Team Leadership · Digital Transformation' }
+    ];
+    
+    // Location command
+    if (q.includes('location') || q.includes('where') || q.includes('based')) return [
+      { t: 't-label', v: '📍 Location:' },
+      { t: 't-hi', v: 'Hyderabad, Telangana, India' },
+      { t: 't-out', v: 'Open to remote and hybrid opportunities worldwide' }
+    ];
+    
+    // Availability / Open to work
+    if (q.includes('available') || q.includes('open to') || q.includes('hiring') || q.includes('looking')) return [
+      { t: 't-label', v: '✅ Current Status:' },
+      { t: 't-hi', v: 'Currently exploring new opportunities' },
+      { t: 't-out', v: 'Open to Senior IT Leadership, Cloud Architect, and AI Engineering roles' }
+    ];
+    
+    // Years of experience
+    if (q.includes('years') || q.includes('experience total') || q.includes('how long')) return [
+      { t: 't-label', v: '⏱️ Professional Experience:' },
+      { t: 't-hi', v: '15+ years in IT & Technology Leadership' },
+      { t: 't-out', v: '8+ years in People Management · 5+ years in AI/ML Development' }
+    ];
+    
+    // System status
+    if (q.includes('status') || q.includes('system') || q.includes('uptime')) return [
+      { t: 't-label', v: '🖥️ System Status:' },
+      { t: 't-out', v: 'Interactive Resume v2.0 · All systems operational' },
+      { t: 't-hi', v: '✅ Profile online · ✅ AI chat active · ✅ Resume PDF available' }
+    ];
+    
+    // Social links commands
+    if (q.includes('linkedin')) return [
+      { t: 't-label', v: '💼 LinkedIn Profile:' },
+      { t: 't-hi', v: 'linkedin.com/in/ravianet/' },
+      { t: 't-out', v: 'Connect with me on LinkedIn for professional networking' }
+    ];
+    if (q.includes('github')) return [
+      { t: 't-label', v: '🐙 GitHub Profile:' },
+      { t: 't-hi', v: 'github.com/ravianet' },
+      { t: 't-out', v: 'Check out my open-source projects and contributions' }
+    ];
+    
+    // Download resume command
+    if (q.includes('download') || q.includes('resume pdf') || q.includes('get resume')) return [
+      { t: 't-label', v: '📄 Resume Download:' },
+      { t: 't-hi', v: 'Click the download icon in the navigation bar to get the PDF!' },
+      { t: 't-out', v: 'Filename: Ravi-Kumar-Valluru-Resume.pdf · Updated: June 2026' }
+    ];
+    
+    // Contact details
+    if (q.includes('contact') || q.includes('email') || q.includes('phone')) return [{ t: 't-label', v: '📧 Contact:' }, { t: 't-hi', v: escapeHtml(resumeAI.contact) }];
+    
+    // Education command
+    if (q.includes('education') || q.includes('degree') || q.includes('university')) return [
+      { t: 't-label', v: '🎓 Education:' },
+      { t: 't-out', v: '• Master of Technology (MTech) in Computer Science' },
+      { t: 't-out', v: '• Bachelor of Technology (BTech) in Information Technology' },
+      { t: 't-hi', v: 'Continuous learning: Azure, AWS, GCP certified cloud professional' }
+    ];
+    
+    // Certifications command
+    if (q.includes('certification') || q.includes('certified') || q.includes('certs')) return [
+      { t: 't-label', v: '🏆 Certifications:' },
+      { t: 't-out', v: '• Microsoft Azure Solutions Architect Expert' },
+      { t: 't-out', v: '• AWS Certified Solutions Architect' },
+      { t: 't-out', v: '• Google Cloud Professional Cloud Architect' },
+      { t: 't-hi', v: '• PMP® Project Management Professional · CISA® Certified' }
+    ];
+    
+    // Professional experience summary
+    if (q.includes('experience') && !q.includes('ai') && !q.includes('total')) return [
+      { t: 't-label', v: '💼 Professional Experience:' },
+      { t: 't-out', v: '• Senior IT Infrastructure Manager: 500+ locations, 50,000+ users' },
+      { t: 't-out', v: '• Cloud Migration Lead: Migrated 200+ enterprise workloads to Azure' },
+      { t: 't-out', v: '• AI Team Lead: Built 5+ production AI/ML systems for enterprise' },
+      { t: 't-hi', v: 'Led teams of 40+ engineers · Delivered $2M+ in cost savings' }
+    ];
+    
+    if (q.includes('all 7') || q.includes('all projects') || q.includes('portfolio')) return [{ t: 't-label', v: 'All 7 Projects:' }, { t: 't-out', v: projectHtml() }];
+    
+    const project = findProject(q);
+    if (project) return [{ t: 't-label', v: `Project ${project.id}: ${escapeHtml(project.name)}` }, { t: 't-out', v: escapeHtml(project.summary) }, { t: 't-hi', v: `Tech: ${escapeHtml(project.tech)}` }];
+    
+    const keywordMatches = searchProjectsByKeyword(q);
+    if (keywordMatches.length) {
+      const cleanedLabel = q.trim().replace(/\s+/g, ' ');
+      return [
+        { t: 't-label', v: `Matching projects for "${escapeHtml(cleanedLabel)}":` },
+        { t: 't-out', v: projectHtml(keywordMatches) }
+      ];
+    }
+    
+    if (q.includes('project') || q.includes('portfolio') || q.includes('all 7')) return [{ t: 't-label', v: 'All 7 Projects:' }, { t: 't-out', v: projectHtml() }];
+    if (q.includes('skill') || q.includes('stack') || q.includes('technology')) return [{ t: 't-label', v: 'Technical Stack:' }, { t: 't-hi', v: escapeHtml(resumeAI.skills.join(' · ')) }];
+    if (q.includes('ai') || q.includes('ml') || q.includes('machine') || q.includes('forecast') || q.includes('anomaly')) return [{ t: 't-label', v: 'AI Experience:' }, { t: 't-out', v: projectHtml(resumeAI.projects.filter(p => p.tags.includes('ai'))) }];
+    if (q.includes('cloud') || q.includes('azure') || q.includes('office') || q.includes('infrastructure') || q.includes('location') || q.includes('users')) return [{ t: 't-label', v: 'Infrastructure Scale:' }, { t: 't-out', v: '15+ years, 500+ locations, 50,000+ users, Azure AD / Office 365, 40+ field engineers and distributed network rollouts.' }];
+    if (q.includes('security') || q.includes('firewall') || q.includes('vpn') || q.includes('compliance')) return [{ t: 't-label', v: 'Security / Network Fit:' }, { t: 't-out', v: 'FortiGate, Sophos, IPSec/SSL VPN, MDM, DLP, endpoint security, compliance tooling and ML-driven anomaly/root-cause workflows.' }];
+    
+    return [{ t: 't-label', v: '🤖 Smart Match:' }, { t: 't-out', v: 'I can answer many questions! Type "help" to see all available commands. Try: "whoami", "experience", "education", "certifications", "contact"' }];
+  }
+
+  function addLine(cls, html) {
+    const d = document.createElement('div');
+    d.className = 't-line';
+    d.innerHTML = `<span class="${cls}">${html}</span>`;
+    tBody.appendChild(d);
+  }
+
+  function runCommand(cmd) {
+    const raw = (cmd || '').trim();
+    if (!raw) return;
+    const p = document.createElement('div');
+    p.className = 't-line';
+    p.innerHTML = `<span class="t-prompt">guest@ravikumar-profile:~$</span><span class="t-cmd">${escapeHtml(raw)}</span>`;
+    tBody.appendChild(p);
+    const res = buildAnswer(raw);
+    if (res === 'CLR') { tBody.innerHTML = ''; return; }
+    res.forEach(r => addLine(r.t, r.v));
+    tBody.scrollTop = tBody.scrollHeight;
+    tInput.focus();
+  }
+
+  function typeBio(text) {
+    clearInterval(bioTimer);
+    heroBioText.textContent = '';
+    let i = 0;
+    bioTimer = setInterval(() => {
+      heroBioText.textContent += text.charAt(i++);
+      if (i >= text.length) clearInterval(bioTimer);
+    }, 18);
+  }
+
+  function applyRole(role, btn) {
+    const data = resumeAI.roles[role];
+    if (!data) return;
+    document.querySelectorAll('.persona-btn').forEach(b => b.classList.toggle('active', b.dataset.role === role));
+    if (btn) btn.classList.add('active');
+    document.querySelector('.hero-subtitle').innerHTML = data.title;
+    document.getElementById('matchScore').textContent = data.score;
+    document.getElementById('tailorSummary').textContent = data.summary;
+    document.getElementById('tailorChips').innerHTML = data.chips.map(c => `<span class="pill">${escapeHtml(c)}</span>`).join('');
+    typeBio(data.bio);
+    document.querySelectorAll('.pcard').forEach((el, index) => {
+      const roles = (el.dataset.roles || '').split(' ');
+      const matched = roles.includes(role);
+      el.classList.toggle('role-match', matched);
+      el.classList.toggle('role-soft', !matched);
+      el.style.order = matched ? index : 100 + index;
+    });
+  }
+
+  function toggleChat(force) {
+    chatPanel.classList.toggle('open', typeof force === 'boolean' ? force : !chatPanel.classList.contains('open'));
+    if (chatPanel.classList.contains('open')) chatInput.focus();
+  }
+
+  function addChatMsg(text, who = 'bot', asHtml = false) {
+    const msg = document.createElement('div');
+    msg.className = `msg ${who}`;
+    if (asHtml) msg.innerHTML = text; else msg.textContent = text;
+    chatBody.appendChild(msg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function chatAnswer(question) {
+    const answer = buildAnswer(question);
+    if (answer === 'CLR') return 'Console clear is available in the terminal.';
+    return answer.map(a => a.v).join('<br>');
+  }
+
+  function askChat(prompt) {
+    const question = (prompt || chatInput.value || '').trim();
+    if (!question) return;
+    toggleChat(true);
+    addChatMsg(question, 'user');
+    chatInput.value = '';
+    setTimeout(() => addChatMsg(chatAnswer(question), 'bot', true), 220);
+  }
+
+  tInput.addEventListener('keydown', e => {
+    if(e.key === 'Enter') { runCommand(tInput.value); tInput.value = ''; }
+  });
+  chatInput.addEventListener('keydown', e => {
+    if(e.key === 'Enter') askChat();
+  });
+  applyRole('ai');
+</script>
+</body>
+</html><script>
+// UNBREAKABLE RIGHT-CLICK PROTECTION
+(function(){
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    return false;
+  }, true);
+  document.addEventListener('mousedown', function(e) {
+    if(e.button === 2) { e.preventDefault(); return false; }
+  }, true);
+  document.addEventListener('selectstart', function(e){e.preventDefault();return false;});
+  document.body.setAttribute('oncontextmenu','return false');
+  document.body.style.webkitUserSelect='none';
+  document.body.style.userSelect='none';
+  document.body.style.msUserSelect='none';
+})();
+</script>
+</body>
+</html>
